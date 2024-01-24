@@ -10,12 +10,24 @@ body {
   font-size: 16px;
 }
 
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
 .info-card {
   background: #fff;
   width: 220px;
   padding: 1.125em;
   border-radius: 0.5em;
   box-shadow: 0 0 12px rgba(22, 197, 255, 0.6);
+  animation: fade-up 0.6s ease-in;
 }
 
 .info-card span {
@@ -34,11 +46,7 @@ body {
 
 .button {
   border-radius: 3px;
-  padding: 8px 15px;
   font-weight: 500;
-  position: relative;
-  z-index: 99;
-  position: relative;
 }
 .button:not(.text-white)::before {
   content: '';

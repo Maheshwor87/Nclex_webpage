@@ -16,18 +16,20 @@
     />
     <title>Nclex Web</title>
   </head>
-  <body class="text-slate-600 2xl:text-[18px]">
+  <body
+    class="text-slate-600 2xl:text-[18px] xl:text-[16px] text-[14px] sm:text-left text-center"
+  >
     <div id="root-app" class="max-w-[1400px] mx-auto pb-[80px] px-5">
       <div
         id="header"
-        class="flex justify-between items-center py-10 px-[50px]"
+        class="hidden sm:flex justify-between items-center xl:py-10 lg:py-8 py-4 lg:px-[50px] px-[20px]"
       >
-        <div class="w-[250px]">
+        <div class="lg:w-[250px] w-[200px] sm:block hidden">
           <img src="nclex_logo.png" alt="nclex-logo" class="w-full" />
         </div>
         <nav
           id="navbar"
-          class="flex justify-end gap-8 font-semibold text-[18px]"
+          class="flex sm:justify-end justify-around w-full xl:gap-8 lg:gap-6 sm:gap-4 gap-2 font-semibold xl:text-[18px] lg:text-[16px] text-[14px]"
         >
           <a href="#" class="text-blue-500 font-bold">Home</a>
           <a href="#">About</a>
@@ -36,34 +38,42 @@
           <a href="#">Contact Us</a>
         </nav>
       </div>
-      <div class="swiper w-[100%] min-h-[300px] mt-[50px]">
+      <div
+        class="swiper w-[100%] min-h-[300px] 2xl:mt-[50px] xl:mt-[40px] mt-[10px]"
+      >
         <div class="swiper-wrapper">
           <!-- first slide -->
-          <div class="swiper-slide py-[50px] px-[60px]">
-            <div class="grid grid-cols-2 gap-[110px]">
+          <div
+            class="swiper-slide xl:py-[50px] xl:px-[60px] py-[10px] px-[20px]"
+          >
+            <div
+              class="grid lg:grid-cols-2 grid-cols-1 2xl:gap-[110px] xl:gap-[90px] lg:gap-[70px] gap-[50px]"
+            >
               <div>
-                <h3 class="text-black 2xl:text-6xl text-5xl font-bold">
+                <h3
+                  class="text-black 2xl:text-6xl xl:text-5xl text-4xl font-bold"
+                >
                   Welcome to the future of Nursing
                 </h3>
-                <p class="mt-8">
+                <p class="xl:mt-8 lg:mt-6 mt-4">
                   Welcome to NCLEX Nepal, your gateway to global nursing
                   success! We specialize in empowering Nepali nurses for the
                   NCLEX exam, ensuring a seamless transition to esteemed
                   healthcare positions in the USA, UK, and Australia.
                 </p>
-                <div class="mt-10">
+                <div class="xl:mt-10 lg:mt-8 mt-6">
                   <button
-                    class="button mr-8 text-white bg-blue-500 border border-blue-500"
+                    class="button lg:px-[15px] sm:px-[12px] px-[7px] lg:py-[10px] sm:py-[8px] py-[5px] 2xl:mr-8 xl:mr-6 lg:mr-4 mr-1 text-white bg-blue-500 border border-blue-500"
                   >
                     Enquiry
                   </button>
                   <button
-                    class="button mr-8 bg-white border border-green-500 text-green-500"
+                    class="button lg:px-[15px] sm:px-[12px] px-[7px] lg:py-[10px] sm:py-[8px] py-[5px] 2xl:mr-8 xl:mr-6 lg:mr-4 mr-1 bg-white border border-green-500 text-green-500"
                   >
                     WhatsApp
                   </button>
                   <button
-                    class="button bg-white border border-blue-500 text-blue-500"
+                    class="button lg:px-[15px] sm:px-[12px] px-[7px] lg:py-[10px] sm:py-[8px] py-[5px] bg-white border border-blue-500 text-blue-500"
                   >
                     Call us Now
                   </button>
@@ -90,7 +100,7 @@
                   <span class="info-card__text">contact@nclexinnepal.com</span>
                 </div>
                 <div
-                  class="info-card absolute xl:bottom-[100px] xl:right-[-45px] xl:translate-x-0 bottom-8 right-[50%] translate-x-[50%]"
+                  class="info-card absolute xl:bottom-[100px] xl:right-[-45px] xl:translate-x-0 bottom-8 right-[50%] translate-x-[50%] sm:block hidden"
                 >
                   <span class="info-card__header">98% Positive Review</span>
                   <span class="info-card__text">100% Coach Efficiency</span>
@@ -100,21 +110,27 @@
           </div>
 
           <!-- second slide -->
-          <div class="swiper-slide py-[50px] px-[60px]">
-            <div class="grid grid-cols-2 gap-[100px]">
+          <div
+            class="swiper-slide xl:py-[50px] xl:px-[60px] py-[10px] px-[20px]"
+          >
+            <div
+              class="grid lg:grid-cols-2 grid-cols-1 2xl:gap-[110px] xl:gap-[90px] lg:gap-[70px] gap-[50px]"
+            >
               <div>
-                <h3 class="text-black 2xl:text-6xl text-5xl font-bold">
+                <h3
+                  class="text-black 2xl:text-6xl xl:text-5xl text-4xl font-bold"
+                >
                   Welcome to the future of Nursing
                 </h3>
-                <p class="mt-8">
+                <p class="xl:mt-8 lg:mt-6 mt-4">
                   Welcome to NCLEX Nepal, your gateway to global nursing
                   success! We specialize in empowering Nepali nurses for the
                   NCLEX exam, ensuring a seamless transition to esteemed
                   healthcare positions in the USA, UK, and Australia.
                 </p>
-                <div class="mt-10">
+                <div class="xl:mt-10 lg:mt-8 mt-6">
                   <button
-                    class="button mr-8 text-white bg-blue-500 border border-blue-500"
+                    class="button lg:px-[15px] sm:px-[12px] px-[10px] lg:py-[10px] sm:py-[8px] py-[5px] text-white bg-blue-500 border border-blue-500"
                   >
                     Enquiry
                   </button>
@@ -133,21 +149,27 @@
           </div>
 
           <!-- third slide -->
-          <div class="swiper-slide py-[50px] px-[60px]">
-            <div class="grid grid-cols-2 gap-[100px]">
+          <div
+            class="swiper-slide xl:py-[50px] xl:px-[60px] py-[10px] px-[20px]"
+          >
+            <div
+              class="grid lg:grid-cols-2 grid-cols-1 2xl:gap-[110px] xl:gap-[90px] lg:gap-[70px] gap-[50px]"
+            >
               <div>
-                <h3 class="text-black 2xl:text-6xl text-5xl font-bold">
+                <h3
+                  class="text-black 2xl:text-6xl xl:text-5xl text-4xl font-bold"
+                >
                   Welcome to the future of Nursing
                 </h3>
-                <p class="mt-8">
+                <p class="xl:mt-8 lg:mt-6 mt-4">
                   Welcome to NCLEX Nepal, your gateway to global nursing
                   success! We specialize in empowering Nepali nurses for the
                   NCLEX exam, ensuring a seamless transition to esteemed
                   healthcare positions in the USA, UK, and Australia.
                 </p>
-                <div class="mt-10">
+                <div class="xl:mt-10 lg:mt-8 mt-6">
                   <button
-                    class="button mr-8 text-white bg-blue-500 border border-blue-500"
+                    class="button lg:px-[15px] sm:px-[12px] px-[10px] lg:py-[10px] sm:py-[8px] py-[5px] text-white bg-blue-500 border border-blue-500"
                   >
                     Enquiry
                   </button>
@@ -166,79 +188,26 @@
           </div>
         </div>
       </div>
-
-      <!-- Hero section -->
-      <!-- <div id="hero" class="grid grid-cols-2 gap-[100px] mt-[100px]">
-        <div>
-          <h3 class="text-black text-6xl font-bold">
-            Welcome to the future of Nursing
-          </h3>
-          <p class="mt-8">
-            Welcome to NCLEX Nepal, your gateway to global nursing success! We
-            specialize in empowering Nepali nurses for the NCLEX exam, ensuring
-            a seamless transition to esteemed healthcare positions in the USA,
-            UK, and Australia.
-          </p>
-          <div class="mt-10">
-            <button
-              class="button mr-8 text-white bg-blue-500 border border-blue-500"
-            >
-              Enquiry
-            </button>
-            <button
-              class="button mr-8 bg-white border border-green-500 text-green-500"
-            >
-              WhatsApp
-            </button>
-            <button
-              class="button bg-white border border-blue-500 text-blue-500"
-            >
-              Call us Now
-            </button>
-          </div>
-        </div>
-        <div class="relative">
-          <div class="aspect-video rounded-xl overflow-hidden">
-            <img
-              src="woman_pointing_phone.jpg"
-              alt="woman pointing phone"
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <div class="info-card absolute top-[-35px] left-[-50px] hidden xl:block">
-            <span class="info-card__header">Phone</span>
-            <span class="info-card__text">+977 01 4168103</span>
-          </div>
-          <div class="info-card absolute bottom-[50px] left-[-100px] hidden xl:block">
-            <span class="info-card__header">Email</span>
-            <span class="info-card__text">contact@nclexinnepal.com</span>
-          </div>
-          <div class="info-card absolute bottom-[100px] right-[-75px]">
-            <span class="info-card__header">98% Positive Review</span>
-            <span class="info-card__text">100% Coach Efficiency</span>
-          </div>
-        </div>
-      </div> -->
       <div
         id="stats"
-        class="w-[80%] mx-auto mt-[100px] grid grid-cols-3 px-10 gap-5"
+        class="mx-auto lg:w-full sm:w-[80%] w-full 2xl:mt-[100px] xl:mt-[80px] lg:mt-[60px] mt-[40px] grid lg:grid-cols-4 grid-cols-2 px-10 gap-3"
       >
-        <div class="stat-card flex flex-col items-center gap-4">
-          <span class="text-4xl text-black font-bold block">700+</span>
-          <span class="font-bold text-black block">NCLEX Passers</span>
+        <div><img src="passers.png" alt="Nclex passers" class="w-full" /></div>
+        <div><img src="visas.png" alt="Nclex visas" class="w-full" /></div>
+        <div>
+          <img src="processing.png" alt="Nclex processing" class="w-full" />
         </div>
-        <div class="stat-card flex flex-col items-center gap-4">
-          <span class="text-4xl text-black font-bold block">200+</span>
-          <span class="font-bold text-black block">US Visas</span>
-        </div>
-        <div class="stat-card flex flex-col items-center gap-4">
-          <span class="text-4xl text-black font-bold block">5+</span>
-          <span class="font-bold text-black block">Years of Experience</span>
+        <div>
+          <img
+            src="excellence.png"
+            alt="Nclex years of excellence"
+            class="w-full"
+          />
         </div>
       </div>
       <div
         id="welcome"
-        class="mt-[100px] w-[65%] mx-auto grid grid-cols-2 gap-8"
+        class="xl:mt-[100px] lg:mt-[80px] sm:mt-[60px] mt-[40px] lg:w-[65%] w-[80%] mx-auto grid lg:grid-cols-2 grid-cols-1 lg:gap-8 gap-4"
       >
         <div class="aspect-square relative">
           <div class="rounded-xl overflow-hidden w-full h-full">
@@ -248,13 +217,15 @@
               class="w-full h-full object-cover"
             />
           </div>
-          <div class="info-card absolute bottom-[35%] left-[-30%]">
+          <div
+            class="info-card absolute bottom-[35%] left-[-30%] lg:block hidden"
+          >
             <span class="info-card__header">2500+ processing</span>
             <span class="info-card__text">100% Coach Efficiency</span>
           </div>
         </div>
         <div>
-          <h3 class="font-bold text-black text-4xl mb-4 mt-3">
+          <h3 class="font-bold text-black xl:text-4xl text-3xl mb-4 mt-3">
             Welcome to NCLEX NEPAL
           </h3>
           <p>
@@ -265,48 +236,79 @@
             training in Nepal and support candidates who apply for overseas
             education with guidance through our overseas consultancy.
           </p>
-          <button class="button bg-blue-500 text-white mt-5">View More</button>
+          <button
+            class="button lg:px-[15px] sm:px-[12px] px-[10px] lg:py-[10px] sm:py-[8px] py-[5px] bg-blue-500 text-white mt-5"
+          >
+            View More
+          </button>
         </div>
       </div>
-      <!-- <div id="offerings">
-        <div class="offer-card">
-          <div>img</div>
-          <h4>NCLEX Institution</h4>
-          <p>
+      <div
+        id="offerings"
+        class="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-7 mt-[100px] lg:px-0 sm:px-5 px-2"
+      >
+        <div
+          class="offer-card rounded-sm p-6 flex flex-col gap-5 items-center shadow-[0_0_15px_rgba(0,0,0,0.12)]"
+        >
+          <div class="w-[40%]">
+            <img src="university.svg" alt="university svg" class="w-full" />
+          </div>
+          <h4 class="text-black font-bold">NCLEX Institution</h4>
+          <p class="text-center text-[16px]">
             NCLEX Institutions mainly offer training programs for major language
             assessment tests like IELTS, OET, CBT, etc through both online and
             offline modes through more in Nepal.
           </p>
         </div>
-        <div class="offer-card">
-          <div>img</div>
-          <h4>Overseas placement</h4>
-          <p>
+        <div
+          class="offer-card rounded-sm p-6 flex flex-col gap-5 items-center shadow-[0_0_15px_rgba(0,0,0,0.12)]"
+        >
+          <div class="w-[40%]">
+            <img src="departure.svg" alt="globe svg" class="w-full" />
+          </div>
+          <h4 class="text-black font-bold">Overseas placement</h4>
+          <p class="text-center text-[16px]">
             NCLEX Nepal's Overseas Placements assists students to find the best
             placements suitable for them overseas and guides them towards
             building a settled career in their desired.
           </p>
         </div>
-        <div class="offer-card">
-          <div>img</div>
-          <h4>Nepclex Practice</h4>
-          <p>
+        <div
+          class="offer-card rounded-sm p-6 flex flex-col gap-5 items-center shadow-[0_0_15px_rgba(0,0,0,0.12)]"
+        >
+          <div class="w-[40%]">
+            <img
+              src="mortarboard.svg"
+              alt="graduation hat svg"
+              class="w-full"
+            />
+          </div>
+          <h4 class="text-black font-bold">Nepclex Practice</h4>
+          <p class="text-center text-[16px]">
             Established to assist students for major competitive entrance
             examinations such as NCLEX etc. that help them practice NCLEX test
             in their own pace anywhere anytimeOverseas Placements
           </p>
         </div>
-        <div class="offer-card">
-          <div>img</div>
-          <h4>Distance Education</h4>
-          <p>
+        <div
+          class="offer-card rounded-sm p-6 flex flex-col gap-5 items-center shadow-[0_0_15px_rgba(0,0,0,0.12)]"
+        >
+          <div class="w-[40%]">
+            <img
+              src="distance.svg"
+              alt="people at a distance svg"
+              class="w-full"
+            />
+          </div>
+          <h4 class="text-black font-bold">Distance Education</h4>
+          <p class="text-center text-[16px]">
             Delivers everything that Distant Education is capable of offering
             ranging from acquiring desired courses through distant learning and
             finishing incomplete education.Nepclex Practice
           </p>
         </div>
       </div>
-      <div id="vision-mission">
+      <!-- <div id="vision-mission">
         <div>
           <h3>Vision</h3>
           <p>
