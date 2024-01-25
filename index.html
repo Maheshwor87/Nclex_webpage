@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link
@@ -18,10 +18,12 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0"
     />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <title>Nclex Web</title>
   </head>
   <body
-    class="text-slate-600 2xl:text-[18px] xl:text-[16px] text-[14px] sm:text-left text-center"
+    class="text-slate-600 xl:text-[16px] text-[14px] sm:text-left text-center"
   >
     <div id="root-app" class="max-w-[1400px] mx-auto pb-[80px] px-5">
       <div
@@ -29,7 +31,7 @@
         class="hidden sm:flex justify-between items-center xl:py-10 lg:py-8 py-4"
       >
         <div class="lg:w-[250px] w-[200px] sm:block hidden">
-          <img src="nclex_logo.png" alt="nclex-logo" class="w-full" />
+          <img src="images/nclex_logo.png" alt="nclex-logo" class="w-full" />
         </div>
         <nav
           id="navbar"
@@ -38,9 +40,9 @@
           <a href="#" class="text-blue-500 font-bold">Home</a>
           <a href="#">About</a>
           <a href="#">Services</a>
-          <a href="#">Success Stories</a>
+          <a href="#success-stories-header">Success Stories</a>
           <a href="#">Events</a>
-          <a href="#">Contact Us</a>
+          <a href="#footer">Contact Us</a>
         </nav>
       </div>
       <div
@@ -48,55 +50,54 @@
         class="grid lg:grid-cols-2 grid-cols-1 2xl:gap-[110px] xl:gap-[90px] lg:gap-[70px] gap-[50px] xl:mt-[60px] lg:mt-[40px] mt-[20px]"
       >
         <div>
-          <h3 class="text-black 2xl:text-6xl xl:text-5xl text-4xl font-bold">
-            Welcome to the future of Nursing
+          <h3
+            class="welcome leading-[80px] text-slate-800 xl:text-5xl text-4xl font-bold"
+          >
+            Welcome to the future of Nursing In USA, UK and Middle East
           </h3>
-          <p class="xl:mt-8 lg:mt-6 mt-4">
-            Welcome to NCLEX Nepal, your gateway to global nursing success! We
-            specialize in empowering Nepali nurses for the NCLEX exam, ensuring
-            a seamless transition to esteemed healthcare positions in the USA,
-            UK, and Australia.
-          </p>
+
           <div class="xl:mt-10 lg:mt-8 mt-6">
-            <button
-              class="button lg:px-[15px] sm:px-[12px] px-[7px] lg:py-[10px] sm:py-[8px] py-[5px] 2xl:mr-8 xl:mr-6 lg:mr-4 mr-1 text-white bg-blue-500 border border-blue-500"
+            <a
+              href="https://office.nclexinnepal.com/inquiry-form"
+              target="_blank"
+              class="button lg:px-[20px] sm:px-[12px] px-[7px] lg:py-[15px] sm:py-[8px] py-[5px] 2xl:mr-8 xl:mr-6 lg:mr-4 mr-1 text-white bg-blue-500 border border-blue-500 rounded-md"
             >
               Enquiry
-            </button>
-            <button
+            </a>
+            <!-- <button
               class="button lg:px-[15px] sm:px-[12px] px-[7px] lg:py-[10px] sm:py-[8px] py-[5px] 2xl:mr-8 xl:mr-6 lg:mr-4 mr-1 bg-white border border-green-500 text-green-500"
             >
               WhatsApp
-            </button>
-            <button
+            </button> -->
+            <!-- <button
               class="button lg:px-[15px] sm:px-[12px] px-[7px] lg:py-[10px] sm:py-[8px] py-[5px] bg-white border border-blue-500 text-blue-500"
             >
               Call us Now
-            </button>
+            </button> -->
           </div>
         </div>
         <div class="relative">
           <div class="aspect-video rounded-xl overflow-hidden">
             <img
-              src="woman_pointing_phone.jpg"
+              src="images/woman_pointing_phone.jpg"
               alt="woman pointing phone"
               class="w-full h-full object-cover"
             />
           </div>
           <div
-            class="info-card absolute top-[-35px] left-[-50px] hidden xl:block"
+            class="card info-card absolute top-[-35px] left-[-50px] hidden xl:block"
           >
             <span class="info-card__header">Phone</span>
             <span class="info-card__text">+977 01 4168103</span>
           </div>
           <div
-            class="info-card absolute bottom-[50px] left-[-100px] hidden xl:block"
+            class="card info-card absolute bottom-[50px] left-[-100px] hidden xl:block"
           >
             <span class="info-card__header">Email</span>
             <span class="info-card__text">contact@nclexinnepal.com</span>
           </div>
           <div
-            class="info-card absolute xl:bottom-[100px] xl:right-[-45px] xl:translate-x-0 bottom-8 right-[50%] translate-x-[50%] sm:block hidden"
+            class="card info-card absolute xl:bottom-[100px] xl:right-[-45px] xl:translate-x-0 bottom-8 right-[50%] translate-x-[50%] sm:block hidden"
           >
             <span class="info-card__header">98% Positive Review</span>
             <span class="info-card__text">100% Coach Efficiency</span>
@@ -104,57 +105,69 @@
         </div>
       </div>
       <h2
-        class="font-bold text-black 2xl:text-5xl xl:text-4xl text-3xl 2xl:my-[150px] xl:my-[100px] lg:my-[40px] my-[20px] text-center"
+        class="glance sub-heading font-medium text-slate-800 xl:text-4xl md:text-3xl sm:text-2xl text-xl lg:mt-[80px] lg:mb-[110px] md:mt-[70px] md:mb-[80px] sm:mt-[50px] sm:mb-[60px] mt-[30px] mb-[40px] text-center"
       >
-        NCLEX Nepal at a glance
+        NCLEX Nepal At A Glance
       </h2>
       <div
         id="stats"
-        class="mx-auto lg:w-full sm:w-[80%] w-full grid lg:grid-cols-4 grid-cols-2 px-10 gap-3"
+        class="mx-auto lg:w-full sm:w-[90%] w-full grid lg:grid-cols-4 grid-cols-2 lg:px-10 md:px-5 sm:px-2 px-0 gap-3"
       >
-        <div><img src="passers.png" alt="Nclex passers" class="w-full" /></div>
-        <div><img src="visas.png" alt="Nclex visas" class="w-full" /></div>
         <div>
-          <img src="processing.png" alt="Nclex processing" class="w-full" />
+          <img src="images/passers.png" alt="Nclex passers" class="w-full" />
+        </div>
+        <div>
+          <img src="images/visas.png" alt="Nclex visas" class="w-full" />
         </div>
         <div>
           <img
-            src="excellence.png"
+            src="images/processing.png"
+            alt="Nclex processing"
+            class="w-full"
+          />
+        </div>
+        <div>
+          <img
+            src="images/excellence.png"
             alt="Nclex years of excellence"
             class="w-full"
           />
         </div>
       </div>
       <h2
-        class="font-bold text-black 2xl:text-5xl xl:text-4xl text-3xl 2xl:my-[150px] xl:my-[100px] lg:my-[40px] my-[20px] text-center"
+        class="courses sub-heading font-medium text-slate-800 xl:text-4xl md:text-3xl sm:text-2xl text-xl lg:mt-[80px] lg:mb-[110px] md:mt-[70px] md:mb-[80px] sm:mt-[50px] sm:mb-[60px] mt-[30px] mb-[40px] text-center"
       >
-        Our courses
+        Our Courses
       </h2>
-      <div class="w-[80%] mx-auto grid grid-cols-3 gap-8">
+      <div
+        class="w-[80%] mx-auto grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8"
+      >
         <div
           class="p-4 shadow-[0_0_15px_rgba(0,0,0,0.15)] rounded-lg flex flex-col justify-between"
         >
           <div
-            class="course-header grid place-items-center rounded-md h-[100px] bg-green-500 text-white font-bold text-xl"
+            class="course-header grid place-items-center rounded-md h-[100px] bg-[#96C83D] text-white font-bold text-xl"
           >
             NCLEX RN
           </div>
           <p class="py-5">
             The National Council Licensure Examination RN is an examination for
-            licensing nurses and midwives to Canada, USA and Australia allowing
+            licensing nurses and midwives to USA, UK and Middle East allowing
             them to practice their profession in the accepted countries. It...
           </p>
-          <button
-            class="bg-green-500 text-white mx-auto block px-3 py-2 rounded-md"
+          <a
+            href="https://office.nclexinnepal.com/inquiry-form"
+            target="_blank"
+            class="bg-[#96C83D] text-white mx-auto block px-3 py-2 rounded-md"
           >
             Enroll Now
-          </button>
+          </a>
         </div>
         <div
           class="p-4 shadow-[0_0_15px_rgba(0,0,0,0.15)] rounded-lg flex flex-col justify-between"
         >
           <div
-            class="course-header grid place-items-center rounded-md h-[100px] bg-sky-500 text-white font-bold text-xl"
+            class="course-header grid place-items-center rounded-md h-[100px] bg-[#EE4546] text-white font-bold text-xl"
           >
             OET & CBT
           </div>
@@ -163,17 +176,19 @@
             quality training for healthcare professionals who wants to work in
             many English speaking countries....
           </p>
-          <button
-            class="bg-sky-500 text-white mx-auto block px-3 py-2 rounded-md"
+          <a
+            href="https://office.nclexinnepal.com/inquiry-form"
+            target="_blank"
+            class="bg-[#EE4546] text-white mx-auto block px-3 py-2 rounded-md"
           >
             Enroll Now
-          </button>
+          </a>
         </div>
         <div
           class="p-4 shadow-[0_0_15px_rgba(0,0,0,0.15)] rounded-lg flex flex-col justify-between"
         >
           <div
-            class="course-header grid place-items-center rounded-md h-[100px] bg-teal-400 text-white font-bold text-xl"
+            class="course-header grid place-items-center rounded-md h-[100px] bg-[#00ADEE] text-white font-bold text-xl break-all"
           >
             Prometric/DHA/HAAD
           </div>
@@ -183,118 +198,285 @@
             language learners of all levels. From beginner to advanced, we have
             the perfect
           </p>
-          <button
-            class="bg-teal-500 text-white mx-auto block px-3 py-2 rounded-md"
+          <a
+            href="https://office.nclexinnepal.com/inquiry-form"
+            target="_blank"
+            class="bg-[#00ADEE] text-white mx-auto block px-3 py-2 rounded-md"
           >
             Enroll Now
-          </button>
+          </a>
         </div>
       </div>
       <h2
-        class="font-bold text-black 2xl:text-5xl xl:text-4xl text-3xl 2xl:my-[150px] xl:my-[100px] lg:my-[40px] my-[20px] text-center"
+        class="how-we-do sub-heading font-medium text-slate-800 xl:text-4xl md:text-3xl sm:text-2xl text-xl lg:mt-[80px] lg:mb-[110px] md:mt-[70px] md:mb-[80px] sm:mt-[50px] sm:mb-[60px] mt-[30px] mb-[40px] text-center"
       >
-        How we do it ?
+        How We Do It ?
       </h2>
+      <div id="how-we-do" class="rounded-3xl overflow-hidden">
+        <img src="images/how_we_work.png" alt="" class="w-full" />
+      </div>
       <h2
-        class="font-bold text-black 2xl:text-5xl xl:text-4xl text-3xl 2xl:my-[150px] xl:my-[100px] lg:my-[40px] my-[20px] text-center"
+        id="success-stories-header"
+        class="success-stories sub-heading font-medium text-slate-800 xl:text-4xl md:text-3xl sm:text-2xl text-xl lg:mt-[80px] lg:mb-[110px] md:mt-[70px] md:mb-[80px] sm:mt-[50px] sm:mb-[60px] mt-[30px] mb-[40px] text-center"
       >
-        Our success stories
+        Our Success Stories
       </h2>
+
+      <div
+        id="success-stories"
+        class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8"
+      >
+        <div
+          class="first-card success-card aspect-video rounded-xl overflow-hidden shadow-[0_0_10px_rgba(0,0,0,0.5)]"
+        >
+          <iframe
+            src="https://www.youtube.com/embed/1XXO2Llhen8?si=S_2bPIb1MFlYcTWh"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            class="w-full h-full"
+          ></iframe>
+        </div>
+        <div
+          class="second-card success-card aspect-video rounded-xl overflow-hidden shadow-[0_0_10px_rgba(0,0,0,0.5)]"
+        >
+          <iframe
+            src="https://www.youtube.com/embed/C3KrlDhhthw?si=vrKqd555vZ4f3TFU"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            class="w-full h-full"
+          ></iframe>
+        </div>
+        <div
+          class="third-card success-card aspect-video rounded-xl overflow-hidden shadow-[0_0_10px_rgba(0,0,0,0.5)]"
+        >
+          <iframe
+            src="https://www.youtube.com/embed/DGgsKgnLnTc?si=79BKK-q3f7mu0_bn"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            class="w-full h-full"
+          ></iframe>
+        </div>
+      </div>
+
+      <div
+        id="testimonials"
+        class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 xl:mt-[80px] lg:mt-[60px] sm:mt-[40px] mt-[20px]"
+      >
+        <div
+          class="testimonial-1 shadow-[0_0_15px_rgba(0,0,0,0.15)] testimonial-card flex flex-col gap-5 p-10 rounded-3xl"
+        >
+          <p class="text-md">
+            As a busy ICU nurse, I strongly recommend online classes. Initially
+            skeptical, they proved highly effective. Recordings provided
+            flexibility, enabling me to enhance my skills conveniently amidst a
+            hectic schedule.
+          </p>
+          <div class="self-end">
+            <div class="flex flex-col pt-2 text-right">
+              <span class="font-semibold text-slate-800"
+                >Rojeena Chapagain</span
+              >
+              <span class="text-[#F24080]">NCLEX-RN</span>
+              <span class="font-bold text-slate-800">2022 Intake</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="testimonial-2 shadow-[0_0_15px_rgba(0,0,0,0.15)] testimonial-card flex flex-col gap-5 p-10 rounded-3xl"
+        >
+          <p class="text-md">
+            Fascinated by NCLEX, I found my guiding light in NCLEX Nepal. Their
+            unwavering dedication, patient support, and comprehensive materials
+            led me to success in my first attempt. Grateful always!
+          </p>
+          <div class="self-end">
+            <div class="flex flex-col pt-2 text-right">
+              <span class="font-semibold text-slate-800">Lakshmi Khadka</span>
+              <span class="text-[#F24080]">NCLEX-RN</span>
+              <span class="font-bold text-slate-800">2022 Intake</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="testimonial-3 shadow-[0_0_15px_rgba(0,0,0,0.15)] testimonial-card flex flex-col gap-5 p-10 rounded-3xl"
+        >
+          <p class="text-md">
+            NCLEX Nepal exceeded my expectations. Patient guidance, continuous
+            support, and excellent study materials ensured my success. Grateful
+            for their dedication and commitment. Highly recommended for aspiring
+            nurses!
+          </p>
+          <div class="self-end">
+            <div class="flex flex-col pt-2 text-right">
+              <span class="font-semibold text-slate-800">Reshma Ghimire</span>
+              <span class="text-[#F24080]">NCLEX-RN</span>
+              <span class="font-bold text-slate-800">2022 Intake</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="banner"
+        class="rounded-2xl overflow-hidden shadow-[0_0_15px_rgba(0,0,0,0.4)] 2xl:mt-[120px] xl:mt-[80px] lg:mt-[60px] md:mt-[40px] mt-[20px] relative"
+      >
+        <img src="images/nclex_banner.jpg" alt="" class="w-full" />
+        <div class="absolute inset-0 grid place-items-center">
+          <div
+            id="banner"
+            class="flex flex-col items-center xl:gap-8 lg:gap-6 md:gap-4 gap-2"
+          >
+            <p
+              class="want-to-text text-white xl:text-4xl lg:text-3xl sm:text-2xl text-xl"
+            >
+              Be the next success story!
+            </p>
+            <a
+              href="https://office.nclexinnepal.com/inquiry-form"
+              target="_blank"
+              class="join-btn text-[18px] text-white bg-blue-600 border-2 border-blue-600 rounded-md px-4 py-3"
+              >Join Today</a
+            >
+          </div>
+        </div>
+      </div>
+
       <h2
-        class="font-bold text-black 2xl:text-5xl xl:text-4xl text-3xl 2xl:my-[150px] xl:my-[100px] lg:my-[40px] my-[20px] text-center"
+        class="why-nclex sub-heading font-medium text-slate-800 xl:text-4xl md:text-3xl sm:text-2xl text-xl lg:mt-[80px] lg:mb-[110px] md:mt-[70px] md:mb-[80px] sm:mt-[50px] sm:mb-[60px] mt-[30px] mb-[40px] text-center"
       >
-        Why Nclex Nepal
+        Why Nclex Nepal ?
       </h2>
-      <div class="grid grid-cols-4 gap-3">
-        <div class="shadow-[0_0_15px_rgba(0,0,0,0.15)] p-5 rounded-md">
-          <img src="expertise.svg" alt="" />
-          <h4 class="text-black font-bold my-2">Expertise</h4>
-          <p>
+      <div class="grid xl:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5">
+        <div
+          class="reason-1 why-card shadow-[0_0_15px_rgba(0,0,0,0.1)] p-6 rounded-2xl"
+        >
+          <img src="images/board.svg" alt="" />
+          <h4 class="text-slate-800 font-bold my-4 text-xl">Expertise</h4>
+          <p class="text-[16px]">
             We have with us the best personnel in the trade who are equipped
             with up to date knowledge and years of experience who finds joy in
             sharing the best of their knowledge
           </p>
         </div>
-        <div class="shadow-[0_0_15px_rgba(0,0,0,0.15)] p-5 rounded-md">
-          <img src="value.svg" alt="" />
-          <h4 class="text-black font-bold my-2">Value</h4>
-          <p>
-            We provide the best services at the most reasonable value thanks to
-            the most efficient methods for resource utilization and productive
-            work environment.
+        <div
+          class="reason-2 why-card shadow-[0_0_15px_rgba(0,0,0,0.1)] p-6 rounded-2xl"
+        >
+          <img src="images/person-board.svg" alt="" />
+          <h4 class="text-slate-800 font-bold my-4 text-xl">
+            Operational Efficiency
+          </h4>
+          <p class="text-[16px]">
+            We streamline the recruitment process, enabling employers to reduce
+            operational & training costs, providing a hassle-free and efficient
+            hiring experience.
           </p>
         </div>
-        <div class="shadow-[0_0_15px_rgba(0,0,0,0.15)] p-5 rounded-md">
-          <img src="simplicity.svg" alt="" />
-          <h4 class="text-black font-bold my-2">Simplicity</h4>
-          <p>
+        <div
+          class="reason-3 why-card shadow-[0_0_15px_rgba(0,0,0,0.1)] p-6 rounded-2xl"
+        >
+          <img src="images/dictionary.svg" alt="" />
+          <h4 class="text-slate-800 font-bold my-4 text-xl">Simplicity</h4>
+          <p class="text-[16px]">
             With years of expertise and in depth knowledge in our fields, we
             have developed the most simple practices that delivers the best
             output with the least effort.
           </p>
         </div>
-        <div class="shadow-[0_0_15px_rgba(0,0,0,0.15)] p-5 rounded-md">
-          <img src="sophistication.svg" alt="" />
-          <h4 class="text-black font-bold my-2">Sophistication</h4>
-          <p>
+        <div
+          class="reason-4 why-card shadow-[0_0_15px_rgba(0,0,0,0.1)] p-6 rounded-2xl"
+        >
+          <img src="images/teacher.svg" alt="" />
+          <h4 class="text-slate-800 font-bold my-4 text-xl">Sophistication</h4>
+          <p class="text-[16px]">
             We make the best use of technology incorporation into our service
             delivery and management providing for maximum accessibility to the
             best of our potentials.
           </p>
         </div>
-        <div class="shadow-[0_0_15px_rgba(0,0,0,0.15)] p-5 rounded-md">
-          <img src="shared.svg" alt="" />
-          <h4 class="text-black font-bold my-2">Shared Vision</h4>
-          <p>
+        <div
+          class="reason-5 why-card shadow-[0_0_15px_rgba(0,0,0,0.1)] p-6 rounded-2xl"
+        >
+          <img src="images/shared.svg" alt="" />
+          <h4 class="text-slate-800 font-bold my-4 text-xl">Shared Vision</h4>
+          <p class="text-[16px]">
             Standing on our clients' feet, we empathise for them and identifies
             their dreams as our own and work restless until the dreams are
             achieved.
           </p>
         </div>
-        <div class="shadow-[0_0_15px_rgba(0,0,0,0.15)] p-5 rounded-md">
-          <img src="community.svg" alt="" />
-          <h4 class="text-black font-bold my-2">Community Culture</h4>
-          <p>
+        <div
+          class="reason-6 why-card shadow-[0_0_15px_rgba(0,0,0,0.1)] p-6 rounded-2xl"
+        >
+          <img src="images/community.svg" alt="" />
+          <h4 class="text-slate-800 font-bold my-4 text-xl">
+            Community Culture
+          </h4>
+          <p class="text-[16px]">
             Anyone choosing to join us becomes a part of us providing for our
             increased strength and happiness through enjoying the fulfillment of
             a dream as a joy for the entire family.
           </p>
         </div>
-        <div class="shadow-[0_0_15px_rgba(0,0,0,0.15)] p-5 rounded-md">
-          <img src="grammar.svg" alt="" />
-          <h4 class="text-black font-bold my-2">Grammar Classes By Experts</h4>
-          <p>
-            Highly qualified and experienced British Council and IOP-trained
-            faculty with Unique teaching methods.
+        <div
+          class="reason-7 why-card shadow-[0_0_15px_rgba(0,0,0,0.1)] p-6 rounded-2xl"
+        >
+          <img src="images/grammar.svg" alt="" />
+          <h4 class="text-slate-800 font-bold my-4 text-xl">Remote Learning</h4>
+          <p class="text-[16px]">
+            We offer seamless remote learning for aspiring nurses, ensuring
+            quality training and preparation for successful placements in the
+            USA, UK and Middle East.
           </p>
         </div>
-        <div class="shadow-[0_0_15px_rgba(0,0,0,0.15)] p-5 rounded-md">
-          <img src="experienced.svg" alt="" />
-          <h4 class="text-black font-bold my-2">Experienced Faculties</h4>
-          <p>
-            At Ajinorah, we have the best faculty who are dedicated, skillful
-            and experienced in the field.
+        <div
+          class="reason-8 why-card shadow-[0_0_15px_rgba(0,0,0,0.1)] p-6 rounded-2xl"
+        >
+          <img src="images/experienced.svg" alt="" />
+          <h4 class="text-slate-800 font-bold my-4 text-xl">
+            Experienced Faculties
+          </h4>
+          <p class="text-[16px]">
+            Our exceptional faculty comprises skilled & experienced
+            professionals, who ensure a high-quality learning experience,
+            empowering students for success in the nursing field.
           </p>
         </div>
       </div>
-      <footer class="grid grid-cols-9 mt-[120px] text-black font-bold">
-        <div class="col-span-3 text-[16px]">
+
+      <footer
+        id="footer"
+        class="grid xl:grid-cols-9 lg:grid-cols-7 sm:grid-cols-4 grid-cols-1 mt-[120px] text-slate-800 font-bold gap-y-5"
+      >
+        <div
+          class="xl:col-span-3 lg:col-span-3 sm:col-span-2 col-span-1 text-[16px]"
+        >
           <h5 class="text-[20px] mb-6">Contact</h5>
-          <p class="leading-loose flex items-center gap-3">
+          <p
+            class="md:leading-loose leading-5 flex md:items-center items-start gap-3 text-left"
+          >
             <span class="material-symbols-outlined text-blue-500">
               location_on </span
             >2nd Floor, Putalisadak Kathmandu 682024
           </p>
-          <p class="leading-loose flex items-center gap-3">
+          <a
+            href="mailto:info@nclexnepal.com"
+            class="leading-loose flex items-center gap-3"
+          >
             <span class="material-symbols-outlined text-blue-500"> mail </span>
             info@nclexnepal.com
-          </p>
+          </a>
           <p class="leading-loose flex items-center gap-3">
             <span class="material-symbols-outlined text-blue-500"> call </span
             >+977 01 4168103
           </p>
         </div>
-        <div class="col-span-2">
+        <div class="xl:col-span-2 lg:col-span-2 sm:col-span-1 col-span-1">
           <h5 class="text-[20px] mb-6">Useful Links</h5>
           <a href="#" class="flex items-center gap-2 leading-loose"
             ><span class="material-symbols-outlined text-slate-600">
@@ -327,7 +509,7 @@
             >Contact Us</a
           >
         </div>
-        <div class="col-span-2">
+        <div class="xl:col-span-2 lg:col-span-2 sm:col-span-1 col-span-1">
           <h5 class="text-[20px] mb-6">Courses</h5>
           <p class="leading-loose flex items-center gap-2">
             <span class="material-symbols-outlined"> chevron_right </span>NLCEX
@@ -342,7 +524,7 @@
             Prometric/DHA/HAAD
           </p>
         </div>
-        <div class="col-span-2">
+        <div class="xl:col-span-2 lg:col-span-2 sm:col-span-1 col-span-1">
           <h5 class="text-[20px] mb-6">More</h5>
           <p class="leading-loose flex items-center gap-2">
             <span class="material-symbols-outlined"> chevron_right </span>Blogs
@@ -366,9 +548,10 @@
         </div>
       </footer>
     </div>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="script.js"></script>
     <script>
       // var swiper = new Swiper('.swiper', {
       //   loop: true,
