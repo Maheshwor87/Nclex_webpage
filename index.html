@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon/nclex_logo.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,32 +21,94 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-    <title>Nclex Web</title>
+    <title>Nclex In Nepal</title>
   </head>
   <body
     class="text-slate-600 xl:text-[16px] text-[14px] sm:text-left text-center"
   >
-    <div id="root-app" class="max-w-[1400px] mx-auto pb-[80px] px-5">
+    <div id="top-nav" class="fixed top-0 z-[999] w-full">
       <div
         id="header"
-        class="hidden sm:flex justify-between items-center xl:py-10 lg:py-8 py-4"
+        class="hidden sm:flex justify-between items-center xl:py-8 lg:py-6 py-4 w-full max-w-[1400px] mx-auto"
       >
-        <div class="lg:w-[250px] w-[200px] sm:block hidden">
+        <div
+          class="lg:w-[250px] w-[200px] sm:block hidden rounded-lg overflow-hidden"
+        >
           <img src="images/nclex_logo.png" alt="nclex-logo" class="w-full" />
         </div>
         <nav
           id="navbar"
-          class="flex sm:justify-end justify-around w-full xl:gap-8 lg:gap-6 sm:gap-4 gap-2 font-semibold xl:text-[18px] lg:text-[16px] text-[14px]"
+          class="flex sm:justify-end justify-around w-full xl:gap-8 lg:gap-6 sm:gap-4 gap-2 font-semibold xl:text-[18px] lg:text-[16px] text-[14px] text-white"
         >
-          <a href="#" class="text-blue-500 font-bold">Home</a>
-          <a href="#">About</a>
-          <a href="#">Services</a>
+          <a href="#">Home</a>
+          <a href="#courses">Our Courses</a>
+          <a href="#how-we-text">How We Work?</a>
           <a href="#success-stories-header">Success Stories</a>
-          <a href="#">Events</a>
-          <a href="#footer">Contact Us</a>
+          <a href="#why-nclex-head">Why NCLEX Nepal?</a>
+          <a href="https://office.nclexinnepal.com/inquiry-form" target="_blank"
+            >Contact Us</a
+          >
         </nav>
       </div>
+    </div>
+    <div id="head" class="relative">
+      <div>
+        <img src="images/nurse-experimental.jpg" alt="" class="w-full" />
+      </div>
       <div
+        class="inset-0 absolute grid place-items-center text-center text-white"
+      >
+        <div>
+          <h2
+            class="2xl:text-6xl xl:text-5xl lg:text-3xl md:text-2xl text-lg drop-shadow-md font-bold xl:mb-5 lg:mb-3 sm:mb-1 mb-0"
+          >
+            Welcome to the Future of Nursing
+          </h2>
+          <h2
+            class="2xl:text-6xl xl:text-5xl lg:text-3xl md:text-2xl text-lg drop-shadow-md font-bold xl:mb-5 lg:mb-3 sm:mb-2 mb-1"
+          >
+            In USA, UK and Middle East
+          </h2>
+          <p class="xl:text-lg md:text-sm text-[12px]">
+            Unlock Success with Our Expert NCLEX Studies<br />
+            Your Path to Nursing Excellence Begins Here!
+          </p>
+          <a
+            href="https://office.nclexinnepal.com/inquiry-form"
+            target="_blank"
+            class="lg:font-semibold xl:text-xl xl:px-4 xl:py-2 bg-blue-600 xl:mt-6 inline-block rounded lg:text-lg lg:px-3 lg:py-2 px-2 py-1 md:mt-4 mt-2 font-normal sm:text-[12px] text-[10px]"
+            >Inquiry</a
+          >
+        </div>
+      </div>
+      <div
+        id="stats"
+        class="absolute 2xl:bottom-[-40px] md:bottom-[-20px] bottom-[-12px] left-[50%] translate-x-[-50%] xl:w-[60%] lg:w-[80%] w-[90%] grid grid-cols-4 lg:px-10 md:px-5 sm:px-2 px-0 lg:gap-7 md:gap-5 sm:gap-2 gap-1"
+      >
+        <div class="shadow-[0_0_15px_rgba(0,0,0,0.4)]">
+          <img src="glance/passers.png" alt="Nclex passers" class="w-full" />
+        </div>
+        <div class="shadow-[0_0_15px_rgba(0,0,0,0.4)]">
+          <img src="glance/visas.png" alt="Nclex visas" class="w-full" />
+        </div>
+        <div class="shadow-[0_0_15px_rgba(0,0,0,0.4)]">
+          <img
+            src="glance/processing.png"
+            alt="Nclex processing"
+            class="w-full"
+          />
+        </div>
+        <div class="shadow-[0_0_15px_rgba(0,0,0,0.4)]">
+          <img
+            src="glance/excellence.png"
+            alt="Nclex years of excellence"
+            class="w-full"
+          />
+        </div>
+      </div>
+    </div>
+    <div id="root-app" class="max-w-[1400px] mx-auto pb-[80px] px-5">
+      <!-- <div
         id="hero"
         class="grid lg:grid-cols-2 grid-cols-1 2xl:gap-[110px] xl:gap-[90px] lg:gap-[70px] gap-[50px] xl:mt-[60px] lg:mt-[40px] mt-[20px]"
       >
@@ -64,16 +127,6 @@
             >
               Enquiry
             </a>
-            <!-- <button
-              class="button lg:px-[15px] sm:px-[12px] px-[7px] lg:py-[10px] sm:py-[8px] py-[5px] 2xl:mr-8 xl:mr-6 lg:mr-4 mr-1 bg-white border border-green-500 text-green-500"
-            >
-              WhatsApp
-            </button> -->
-            <!-- <button
-              class="button lg:px-[15px] sm:px-[12px] px-[7px] lg:py-[10px] sm:py-[8px] py-[5px] bg-white border border-blue-500 text-blue-500"
-            >
-              Call us Now
-            </button> -->
           </div>
         </div>
         <div class="relative">
@@ -103,50 +156,27 @@
             <span class="info-card__text">100% Coach Efficiency</span>
           </div>
         </div>
-      </div>
-      <h2
+      </div> -->
+      <!-- <h2
         class="glance sub-heading font-medium text-slate-800 xl:text-4xl md:text-3xl sm:text-2xl text-xl lg:mt-[80px] lg:mb-[110px] md:mt-[70px] md:mb-[80px] sm:mt-[50px] sm:mb-[60px] mt-[30px] mb-[40px] text-center"
       >
         NCLEX Nepal At A Glance
-      </h2>
-      <div
-        id="stats"
-        class="mx-auto lg:w-full sm:w-[90%] w-full grid lg:grid-cols-4 grid-cols-2 lg:px-10 md:px-5 sm:px-2 px-0 gap-3"
-      >
-        <div>
-          <img src="images/passers.png" alt="Nclex passers" class="w-full" />
-        </div>
-        <div>
-          <img src="images/visas.png" alt="Nclex visas" class="w-full" />
-        </div>
-        <div>
-          <img
-            src="images/processing.png"
-            alt="Nclex processing"
-            class="w-full"
-          />
-        </div>
-        <div>
-          <img
-            src="images/excellence.png"
-            alt="Nclex years of excellence"
-            class="w-full"
-          />
-        </div>
-      </div>
+      </h2> -->
+
       <h2
-        class="courses sub-heading font-medium text-slate-800 xl:text-4xl md:text-3xl sm:text-2xl text-xl lg:mt-[80px] lg:mb-[110px] md:mt-[70px] md:mb-[80px] sm:mt-[50px] sm:mb-[60px] mt-[30px] mb-[40px] text-center"
+        id="courses"
+        class="courses sub-heading font-medium text-slate-800 xl:text-4xl md:text-3xl sm:text-2xl text-xl 2xl:mt-[100px] lg:mt-[80px] lg:mb-[80px] md:mb-[60px] sm:mt-[60px] sm:mb-[40px] mt-[30px] mb-[30px] text-center"
       >
         Our Courses
       </h2>
       <div
-        class="w-[80%] mx-auto grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8"
+        class="xl:w-[80%] md:w-[90%] w-full mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 xl:gap-8 gap-4"
       >
         <div
           class="p-4 shadow-[0_0_15px_rgba(0,0,0,0.15)] rounded-lg flex flex-col justify-between"
         >
           <div
-            class="course-header grid place-items-center rounded-md h-[100px] bg-[#96C83D] text-white font-bold text-xl"
+            class="course-header grid place-items-center rounded-md xl:h-[100px] md:h-[80px] h-[65px] bg-[#96C83D] text-white font-bold text-xl"
           >
             NCLEX RN
           </div>
@@ -167,7 +197,7 @@
           class="p-4 shadow-[0_0_15px_rgba(0,0,0,0.15)] rounded-lg flex flex-col justify-between"
         >
           <div
-            class="course-header grid place-items-center rounded-md h-[100px] bg-[#EE4546] text-white font-bold text-xl"
+            class="course-header grid place-items-center rounded-md xl:h-[100px] md:h-[80px] h-[65px] bg-[#EE4546] text-white font-bold text-xl"
           >
             OET & CBT
           </div>
@@ -188,7 +218,7 @@
           class="p-4 shadow-[0_0_15px_rgba(0,0,0,0.15)] rounded-lg flex flex-col justify-between"
         >
           <div
-            class="course-header grid place-items-center rounded-md h-[100px] bg-[#00ADEE] text-white font-bold text-xl break-all"
+            class="course-header grid place-items-center rounded-md xl:h-[100px] md:h-[80px] h-[65px] bg-[#00ADEE] text-white font-bold text-xl break-all"
           >
             Prometric/DHA/HAAD
           </div>
@@ -208,11 +238,15 @@
         </div>
       </div>
       <h2
+        id="how-we-text"
         class="how-we-do sub-heading font-medium text-slate-800 xl:text-4xl md:text-3xl sm:text-2xl text-xl lg:mt-[80px] lg:mb-[110px] md:mt-[70px] md:mb-[80px] sm:mt-[50px] sm:mb-[60px] mt-[30px] mb-[40px] text-center"
       >
         How We Do It ?
       </h2>
-      <div id="how-we-do" class="rounded-3xl overflow-hidden">
+      <div
+        id="how-we-do"
+        class="rounded-3xl overflow-hidden lg:w-[70%] lg:mx-auto w-full"
+      >
         <img src="images/how_we_work.png" alt="" class="w-full" />
       </div>
       <h2
@@ -324,23 +358,23 @@
 
       <div
         id="banner"
-        class="rounded-2xl overflow-hidden shadow-[0_0_15px_rgba(0,0,0,0.4)] 2xl:mt-[120px] xl:mt-[80px] lg:mt-[60px] md:mt-[40px] mt-[20px] relative"
+        class="xl:rounded-2xl lg:rounded-xl md:rounded-lg rounded-md overflow-hidden shadow-[0_0_15px_rgba(0,0,0,0.4)] 2xl:mt-[120px] xl:mt-[80px] lg:mt-[60px] md:mt-[40px] mt-[20px] relative"
       >
         <img src="images/nclex_banner.jpg" alt="" class="w-full" />
         <div class="absolute inset-0 grid place-items-center">
           <div
             id="banner"
-            class="flex flex-col items-center xl:gap-8 lg:gap-6 md:gap-4 gap-2"
+            class="flex flex-col items-center xl:gap-8 lg:gap-6 md:gap-4 sm:gap-2 gap-1"
           >
             <p
-              class="want-to-text text-white xl:text-4xl lg:text-3xl sm:text-2xl text-xl"
+              class="want-to-text text-white xl:text-4xl lg:text-3xl sm:text-xl text-md"
             >
               Be the next success story!
             </p>
             <a
               href="https://office.nclexinnepal.com/inquiry-form"
               target="_blank"
-              class="join-btn text-[18px] text-white bg-blue-600 border-2 border-blue-600 rounded-md px-4 py-3"
+              class="join-btn xl:text-[18px] lg:text-[16px] sm:text-[14px] text-[10px] text-white bg-blue-600 border-2 border-blue-600 rounded-md xl:px-4 xl:py-3 lg:px-3 lg:py-2 px-2 py-1"
               >Join Today</a
             >
           </div>
@@ -348,11 +382,15 @@
       </div>
 
       <h2
+        id="why-nclex-head"
         class="why-nclex sub-heading font-medium text-slate-800 xl:text-4xl md:text-3xl sm:text-2xl text-xl lg:mt-[80px] lg:mb-[110px] md:mt-[70px] md:mb-[80px] sm:mt-[50px] sm:mb-[60px] mt-[30px] mb-[40px] text-center"
       >
-        Why Nclex Nepal ?
+        Why NCLEX Nepal ?
       </h2>
-      <div class="grid xl:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5">
+      <div
+        id="why-nclex"
+        class="grid xl:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5"
+      >
         <div
           class="reason-1 why-card shadow-[0_0_15px_rgba(0,0,0,0.1)] p-6 rounded-2xl"
         >
@@ -483,27 +521,34 @@
               chevron_right </span
             >Home</a
           >
-          <a href="#" class="flex items-center gap-2 leading-loose"
+          <a href="#courses" class="flex items-center gap-2 leading-loose"
             ><span class="material-symbols-outlined text-slate-600">
               chevron_right </span
-            >About</a
+            >Our Courses</a
           >
-          <a href="#" class="flex items-center gap-2 leading-loose"
+          <a href="#how-we-text" class="flex items-center gap-2 leading-loose"
             ><span class="material-symbols-outlined text-slate-600">
               chevron_right </span
-            >Services</a
+            >How We Work?</a
           >
-          <a href="#" class="flex items-center gap-2 leading-loose"
+          <a
+            href="#success-stories"
+            class="flex items-center gap-2 leading-loose"
             ><span class="material-symbols-outlined text-slate-600">
               chevron_right </span
             >Success Stories</a
           >
-          <a href="#" class="flex items-center gap-2 leading-loose"
+          <a
+            href="#why-nclex-head"
+            class="flex items-center gap-2 leading-loose"
             ><span class="material-symbols-outlined text-slate-600">
               chevron_right </span
-            >Events</a
+            >Why NCLEX Nepal?</a
           >
-          <a href="#" class="flex items-center gap-2 leading-loose"
+          <a
+            href="https://office.nclexinnepal.com/inquiry-form"
+            target="_blank"
+            class="flex items-center gap-2 leading-loose"
             ><span class="material-symbols-outlined text-slate-600">
               chevron_right </span
             >Contact Us</a
@@ -511,18 +556,18 @@
         </div>
         <div class="xl:col-span-2 lg:col-span-2 sm:col-span-1 col-span-1">
           <h5 class="text-[20px] mb-6">Courses</h5>
-          <p class="leading-loose flex items-center gap-2">
+          <a href="#courses" class="leading-loose flex items-center gap-2">
             <span class="material-symbols-outlined"> chevron_right </span>NLCEX
             RN
-          </p>
-          <p class="leading-loose flex items-center gap-2">
+          </a>
+          <a href="#courses" class="leading-loose flex items-center gap-2">
             <span class="material-symbols-outlined"> chevron_right </span>OET &
             CBT
-          </p>
-          <p class="leading-loose flex items-center gap-2">
+          </a>
+          <a href="#courses" class="leading-loose flex items-center gap-2">
             <span class="material-symbols-outlined"> chevron_right </span>
             Prometric/DHA/HAAD
-          </p>
+          </a>
         </div>
         <div class="xl:col-span-2 lg:col-span-2 sm:col-span-1 col-span-1">
           <h5 class="text-[20px] mb-6">More</h5>

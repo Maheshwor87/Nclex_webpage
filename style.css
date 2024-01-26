@@ -90,3 +90,38 @@ h6 {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+#top-nav {
+  transition: all 500ms ease;
+}
+
+#top-nav.top-scrolled {
+  background: #fff;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  transition: all 500ms ease;
+}
+
+#top-nav #header {
+  transition: all 500ms ease;
+}
+
+.top-scrolled #header {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  transition: all 500ms ease;
+}
+
+#navbar a {
+  transition: all 500ms ease;
+}
+
+#navbar a:hover {
+  color: #70baff;
+}
+
+.top-scrolled #navbar a {
+  color: #1e293b;
+}
+.top-scrolled #navbar a:hover {
+  color: #00adee;
+}

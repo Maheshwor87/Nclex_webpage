@@ -182,3 +182,30 @@ if (window.innerWidth > 1024) {
       delay: -0.2,
     });
 }
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   const navbar = document.getElementById('header');
+// });
+const header = document.getElementById('header');
+const navbar = document.getElementById('top-nav');
+
+let lastScrollTop = 0;
+window.addEventListener('scroll', function () {
+  let scrollTop = window.scrollY || document.documentElement.scrollTop;
+  if (window.innerWidth > 768) {
+    if (scrollTop > 85) {
+      navbar.classList.add('top-scrolled');
+    } else {
+      navbar.classList.remove('top-scrolled');
+    }
+  } else {
+    if (scrollTop > 30) {
+      navbar.classList.add('top-scrolled');
+    } else {
+      navbar.classList.remove('top-scrolled');
+    }
+  }
+  lastScrollTop = scrollTop;
+});
+
+console.log(window.location.href.includes('success-stories-header'));
