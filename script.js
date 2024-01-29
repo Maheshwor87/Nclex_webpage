@@ -7,12 +7,6 @@ if (window.innerWidth > 1024) {
     duration: 1,
     scrollTrigger: '.welcome',
   });
-  gsap.from('.glance', {
-    y: 100,
-    opacity: 0,
-    duration: 1,
-    scrollTrigger: '.glance',
-  });
   gsap.from('.courses', {
     y: 100,
     opacity: 0,
@@ -31,6 +25,12 @@ if (window.innerWidth > 1024) {
     duration: 1,
     scrollTrigger: '.success-stories',
   });
+  gsap.from('#testimonials-header', {
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    scrollTrigger: '#testimonials-header',
+  });
   gsap.from('.why-nclex', {
     y: 100,
     opacity: 0,
@@ -43,6 +43,43 @@ if (window.innerWidth > 1024) {
     duration: 1,
     scrollTrigger: '.card',
   });
+
+  // Animation for glance cards
+
+  const tglance = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.glance',
+    },
+  });
+  tglance
+    .from('.glance', {
+      y: 100,
+      opacity: 0,
+      duration: 0.8,
+    })
+    .from('.passers', {
+      y: 70,
+      opacity: 0,
+      duration: 0.6,
+    })
+    .from('.visas', {
+      y: 70,
+      opacity: 0,
+      duration: 0.6,
+      delay: -0.4,
+    })
+    .from('.processing', {
+      y: 70,
+      opacity: 0,
+      duration: 0.6,
+      delay: -0.4,
+    })
+    .from('.excellence', {
+      y: 70,
+      opacity: 0,
+      duration: 0.6,
+      delay: -0.4,
+    });
 
   // Animation for success stories
   const tl1 = gsap.timeline({
