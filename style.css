@@ -132,3 +132,7 @@ h6 {
 .top-scrolled #navbar a:hover {
   color: #00adee;
 }
+
+#footer {
+  background: url('./images/footer.png');
+}
