@@ -358,19 +358,4 @@ if (isDesktop) {
       duration: 0.4,
       delay: -0.2,
     });
-
-  // Events section
-  gsap.from('#events', {
-    y: headerTranslate,
-    opacity: 0,
-    duration: headerDuration,
-    scrollTrigger: '#events',
-  });
-
-  gsap.from('.event-banner-container', {
-    y: 100,
-    opacity: 0,
-    duration: 0.6,
-    scrollTrigger: '.event-banner-container',
-  });
 }
