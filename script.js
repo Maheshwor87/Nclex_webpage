@@ -187,19 +187,19 @@ if (isDesktop) {
 
   if (isDesktop) {
     tl1
-      .to('.third-card', {
-        x: 0,
+      .to('.first-card', {
+        y: 0,
         opacity: 1,
         duration: 0.8,
       })
       .to('.second-card', {
-        x: 0,
+        y: 0,
         opacity: 1,
         duration: 0.8,
         delay: -0.4,
       })
-      .to('.first-card', {
-        x: 0,
+      .to('.third-card', {
+        y: 0,
         opacity: 1,
         duration: 0.8,
         delay: -0.4,
@@ -207,18 +207,18 @@ if (isDesktop) {
   } else {
     tl1
       .to('.first-card', {
-        x: 0,
+        y: 0,
         opacity: 1,
         duration: 0.8,
       })
       .to('.second-card', {
-        x: 0,
+        y: 0,
         opacity: 1,
         duration: 0.8,
         delay: -0.4,
       })
       .to('.third-card', {
-        x: 0,
+        y: 0,
         opacity: 1,
         duration: 0.8,
         delay: -0.4,
