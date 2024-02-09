@@ -373,4 +373,20 @@ if (isDesktop) {
     duration: 0.6,
     scrollTrigger: '.event-banner-container',
   });
+
+  // Products section
+  gsap.from('#products', {
+    y: headerTranslate,
+    opacity: 0,
+    duration: headerDuration,
+    scrollTrigger: '#products',
+  });
+
+  gsap.from('.our-product-container', {
+    y: 100,
+    opacity: 0,
+    duration: 0.6,
+    delay: 0.2,
+    scrollTrigger: '.our-product-container',
+  });
 }
