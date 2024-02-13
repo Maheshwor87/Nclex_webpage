@@ -1970,7 +1970,7 @@ blockquote{
 	height:100%;
 	width:43%;
 	position:absolute;
-	background:url(../images/bg-faqs.jpg) no-repeat;
+	background:url("/images/banner-eastern.jpg") no-repeat;
 	background-size:cover;
 }
 .tg-askquestions .faq-bg-responsive {
@@ -1996,7 +1996,7 @@ blockquote{
 	/*	linear-gradient(135deg,*/
 	/*	rgba(117, 181, 73, 0.7) 0%,*/
 	/*	rgba(38, 109, 181,0.7) 80%);*/
-	background:url(../images/1.jpeg);
+	background:url(../images/banner-eastern.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
@@ -3334,7 +3334,7 @@ body.tg-fixedme .tg-headervtwo:before{display:none;}
 			FQAs V 2 Style
 ============================================= */
 .tg-askquestionsvtwo:before{
-	background:url(../images/bg-faqs-02.jpg) no-repeat;
+	background:url('/images/banner-eastern.jpg') no-repeat;
 	background-size:cover;
 }
 
@@ -4268,4 +4268,36 @@ body.tg-fixedme .tg-headervtwo:before{display:none;}
 	height:125px;
 	position:absolute;
 	margin:-63px 0 0 -64px;
+}
+
+.event-desktop {
+	display: none;
+}
+.event-mobile {
+	display: block;
+}
+
+@media screen and (min-width: 769px) {
+	.event-desktop {
+		display: block;
+	}
+	.event-mobile {
+		display: none;
+	}	
+}
+
+.swiper {
+	width: calc(100% - 40px);
+	margin-inline: auto;
+	padding-bottom: 20px;
+}
+.swiper-slide {
+	border-radius: 10px;
+	overflow: hidden;
+	aspect-ratio: 16 / 9;
+}
+
+.swiper-slide iframe {
+	width: 100%;
+	height: 100%;
 }
