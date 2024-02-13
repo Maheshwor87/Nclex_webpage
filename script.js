@@ -1,7 +1,20 @@
 const header = document.getElementById('header');
 const navbar = document.getElementById('top-nav');
+const menuBtn = document.getElementById('hamburger-button');
+const menuIcon = document.getElementById('hamburger-icon');
+const mobileNav = document.getElementById('mobile-nav');
 
 let lastScrollTop = 0;
+
+menuBtn.addEventListener('click', () => {
+  if(mobileNav.classList.contains('expanded')){
+    mobileNav.classList.remove('expanded');
+    menuIcon.innerText = 'menu';
+  } else {
+    mobileNav.classList.add('expanded')
+    menuIcon.innerText = 'close';
+  }
+})
 
 function pageOffsetChecker() {
   let scrollTop = window.scrollY || document.documentElement.scrollTop;

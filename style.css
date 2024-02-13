@@ -132,3 +132,16 @@ h6 {
 .top-scrolled #navbar a:hover {
   color: #00adee;
 }
+
+#mobile-nav {
+  transition: transform 400ms ease;
+  transform: translateX(100%);
+}
+#mobile-nav.expanded {
+  transform: translateX(0);
+  transition: transform 400ms ease;
+}
+
+#hamburger-icon {
+  transition: all 400ms ease;
+}

@@ -24,8 +24,26 @@
     <title>Nclex Nepal | Putalisadak, Kathmandu</title>
   </head>
   <body
-    class="text-slate-600 xl:text-[16px] text-[14px] sm:text-left text-center"
+    class="text-slate-600 xl:text-[16px] text-[14px] sm:text-left text-center overflow-x-hidden"
   >
+    <button id="hamburger-button" class="fixed top-5 left-5 z-[999] shadow-xl border-2 border-slate-500 bg-white w-[35px] h-[35px] sm:hidden flex items-center justify-center rounded-full"><span id="hamburger-icon" class="material-symbols-outlined text-black">menu</span></button>
+
+    <div id="mobile-nav" class="w-[200px] h-screen overflow-x-hidden overflow-y-auto fixed right-0 top-0 z-[999] bg-white shadow-[0_5px_15px_rgba(0,0,0,0.3)] block sm:hidden">
+      <div class="flex flex-col gap-3 px-2 py-3 font-semibold items-center w-full">
+        <img src="images/nclex_logo.png" alt="nclex-logo" class="w-[90%] block mx-auto mb-5" />
+        <a href="#">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#how-we-header">Workflow</a>
+        <a href="#success-stories-header">Stories</a>
+        <a href="#testimonials-header">Testimonials</a>
+        <a href="#why-nclex-head">Why us?</a>
+        <a href="#events">Events</a>
+        <a href="#products">Product</a>
+        <a href="https://office.nclexinnepal.com/inquiry-form" target="_blank"
+          >Contact</a
+        >
+      </div>
+    </div>
     <div id="top-nav" class="fixed top-0 z-[999] w-full">
       <div
         id="header"
