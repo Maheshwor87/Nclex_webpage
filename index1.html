@@ -14,7 +14,13 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="/images/logo-n.png">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/icomoon.css">
@@ -22,14 +28,72 @@
     <link rel="stylesheet" href="css/customScrollbar.css">
     <link rel="stylesheet" href="css/photoswipe.css">
     <link rel="stylesheet" href="css/default-skin.css">
-    <link rel="stylesheet" href="css/prettyPhoto.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/transitions.css">
 
-    <link rel="stylesheet" href="css/main1.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/color.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/responsive1.css">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+            integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+            crossorigin="anonymous"></script>
+    <style>
+        @media (max-width: 768px) {
+            .carousel-inner .carousel-item > div {
+                display: none;
+            }
+            .carousel-inner .carousel-item > div:first-child {
+                display: block;
+            }
+        }
+
+        .carousel-inner .carousel-item.active{
+            display: flex;
+        }
+        .card-body{
+            padding: 0;
+        }
+        .carousel i{
+            color: #0a6db5; font-size: 30px
+        }
+
+        /* display 3 */
+        @media (min-width: 768px) {
+
+        }
+        @media (max-width: 570px) {
+
+            .statistics .stat{
+                text-align: center;
+            }
+            .carousel-control-prev{
+                left: 0!important;
+            }
+            .carousel-control-next{
+                right: 0!important;
+            }
+            .carousel i{
+                font-size: 20px
+            }
+        }
+
+
+        .carousel-control-prev{
+            left: -20px;
+        }
+        .carousel-control-next{
+            right: -20px;
+        }
+
+
+
+    </style>
+
+
 </head>
 <body id="body" class="tg-home tg-hometwo">
 <!--[if lt IE 8]>
@@ -55,15 +119,6 @@
                     <div class="tg-navigationarea">
                         <!--							<a class="tg-btn tg-btnbecommember" href="javascript:void(0);">Book Your Seat</a>-->
                         <nav id="tg-nav" class="tg-nav">
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                                        data-target="#tg-navigation" aria-expanded="false">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                            </div>
                             <div id="tg-navigation" class="collapse navbar-collapse tg-navigation">
                                 <div class="header-email">
                                     Contact:
@@ -93,7 +148,7 @@
                         <!--						<div>-->
                         <figure class="tg-themepostimg no-background">
 
-                            <img src="images/banner/2.jpeg" alt="image description">
+                            <img src="images/banner/eastern-top-banner.jpg" alt="image description">
                             <!--								<figcaption>-->
                             <!--									<div class="tg-bannercontent" data-tilt >-->
                             <!--										<span class="tg-datetime">February 7 - March 17 , 2024</span>-->
@@ -114,388 +169,537 @@
             </div>
             <div class="col-md-4 p-0 m-0 col-xs-12 iframe" id="register-iframe">
                 <iframe src="https://office.nclexinnepal.com/nursing-event/" class="p-0 m-0"
-                        style="height: 100%"></iframe>
+                        style="height: 100%" id="iframe-register"></iframe>
 
             </div>
+        </div>
+    </div>
+</div>
+<!--************************************
+        Home Slider End
+*************************************-->
+<!--************************************
+        Main Start
+*************************************-->
+<main id="tg-main" class="tg-main tg-haslayout">
+    <!--************************************
+            About Us Start
+    *************************************-->
+    <section id="tg-schedule" class="tg-sectionspace pt-0 tg-haslayout tg-bglight">
+        <div class="container">
+            <div class="row">
+                <div class="offset-xs-0 col-xs-12 offset-sm-0 col-sm-12 offset-md-2 col-md-8 offset-lg-2 col-lg-8">
+                    <div class="tg-headholder pb-0">
+                        <div class="tg-sectionhead ">
+                            <div class="tg-sectionheading pt-5">
+                                <h2>Our Tour schedule 2024</h2>
+                            </div>
+                            <!--<h3>Western Edition</h3>-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-desktop col-sm-12">
+                    <div class="event-schedule-image">
+                        <div class="image-container">
+                            <img src="images/events/western.png"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-mobile col-sm-12">
+                    <div class="event-schedule-image-mobile">
+                        <div class="image-container">
+                            <img src="images/events/nit-mobile-2.png"/>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="tg-haslayout tg-sectionspace tg-bgaddtocalendar">
+        <div class="container">
+            <div class="tg-eventinfo tg-eventinfovtwo">
+                <div class="tg-eventcontent">
+                    <span>NCLEX | OET | OBA</span>
+                    <h2>Welcome to the future of nursing in </br>USA, UK & Australia</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tg-price" class="tg-sectionspace tg-haslayout ">
+        <div class="container">
+            <div class="row statistics ">
+                <div class="offset-xs-0 col-xs-12 offset-sm-0 col-sm-12 offset-md-2 col-md-8 offset-lg-2 col-lg-8">
+                    <div class="tg-sectionhead">
+                        <div class="tg-sectionheading">
+                            <h2>NCLEX Nepal at a glance</h2>
+                            <!--                                    <h2>Affordable event packages</h2>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-3">
+                    <div class="stat">
+                        <div class="image-holder">
+                            <img src="images/features/years-of-excellence.png"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-3">
+                    <div class="stat">
+                        <div class="image-holder">
+                            <img src="images/features/processing.png"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-3">
+                    <div class="stat">
+                        <div class="image-holder">
+                            <img src="images/features/nclex-passers.png"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-3">
+                    <div class="stat">
+                        <div class="image-holder">
+                            <img src="images/features/us-visas.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="tg-askquestions tg-haslayout tg-sectionspace tg-bglight">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7" id="faq-section">
+                    <div class="tg-faqs">
+                        <div class="tg-sectionhead tg-textalignleft">
+                            <div class="tg-sectionheading">
+                                <span>Never hesitate to ask</span>
+                                <h2>Frequent asked questions</h2>
+                            </div>
+                        </div>
+                        <div id="tg-accordion" class="tg-accordion" role="tablist" aria-multiselectable="true">
+                            <div class="tg-panel">
+                                <h4><span>Q.</span>Who can attend the session?</h4>
+                                <div class="tg-panelcontent">
+                                    <div class="tg-description">
+                                        <p><span>A.</span>This seminar is exclusively for NURSES, including those
+                                            with BSC, BN, and PCL qualifications.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tg-panel">
+                                <h4><span>Q.</span>Is entry to the seminar free?</h4>
+                                <div class="tg-panelcontent">
+                                    <div class="tg-description">
+                                        <p><span>A.</span>Yes, entry to the seminar is absolutely free. We believe
+                                            in providing valuable information to aspiring nurses without any
+                                            financial barriers.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tg-panel">
+                                <h4><span>Q.</span>Is Registration required?</h4>
+                                <div class="tg-panelcontent">
+                                    <div class="tg-description">
+                                        <p><span>A.</span>Yes, registration is compulsory.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tg-panel">
+                                <h4><span>Q.</span>How do I register for the seminar?</h4>
+                                <div class="tg-panelcontent">
+                                    <div class="tg-description">
+                                        <p><span>A.</span>To sign up for the session, visit the Instagram profile
+                                            page at “nclexnepal.official“ and click the link provided in the bio
+                                            section.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tg-panel">
+                                <h4><span>Q.</span>What are the key topics that will be covered in the seminar?</h4>
+                                <div class="tg-panelcontent">
+                                    <div class="tg-description">
+                                        <p><span>A.</span>The seminar will cover crucial aspects such as:
+                                        <ul>
+                                            <li>NCLEX: National Council Licensure Examination</li>
+                                            <li>OET: Occupational English Test)</li>
+                                            <li>OBA: Outcome Based Assessment.</li>
+                                            <li>Costs: Breakdown of expenses associated with exams, certification,
+                                                and relocation.
+                                            </li>
+                                            <li>Opportunities for Nurses: Comprehensive discussion on career
+                                                prospects and pathways in the UK, USA, and Australia.
+                                            </li>
+                                        </ul>
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tg-panel">
+                                <h4><span>Q.</span>What are the key points that will be addressed during the
+                                    seminar?</h4>
+                                <div class="tg-panelcontent">
+                                    <div class="tg-description">
+                                        <ul>
+                                            <li>Visa Processes: Guidance on navigating visa procedures for each
+                                                destination.
+                                            </li>
+                                            <li>Credential Evaluation: Understanding the process of having your
+                                                credentials recognized in these countries.
+                                            </li>
+                                            <li>Job Placement Assistance: Information on resources and support
+                                                available for securing nursing positions.
+                                            </li>
+                                            <li>Networking Opportunities: Information on building professional
+                                                connections within the nursing community.
+                                            </li>
+                                            <li>Q&A Session: A dedicated time for attendees to ask specific
+                                                questions and clarify doubts.
+                                            </li>
+                                        </ul>
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tg-panel">
+                                <h4><span>Q.</span>Can I bring a friend?</h4>
+                                <div class="tg-panelcontent">
+                                    <div class="tg-description">
+                                        <p><span>A.</span>Yes, you are welcome to bring a friend who is interested
+                                            in exploring nursing opportunities abroad. However, please ensure they
+                                            are nurses and also register to guarantee their seat.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tg-panel">
+                                <h4><span>Q.</span>How long is the seminar expected to last?</h4>
+                                <div class="tg-panelcontent">
+                                    <div class="tg-description">
+                                        <p><span>A.</span>The seminar is scheduled to last approximately 3 hours.
+                                            This includes presentations, Q&A sessions, and networking opportunities.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tg-panel">
+                                <h4><span>Q.</span>How can I contact the organizers for further information?</h4>
+                                <div class="tg-panelcontent">
+                                    <div class="tg-description">
+                                        <p><span>A.</span>For any additional queries, you can reach out to our
+                                            organizers at 01-4168241/103.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 faq-bg-responsive">
+                    <img src="images/banner-eastern.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tg-sectionspace tg-haslayout ">
+        <div class="container">
+            <div class="row">
+                <!--                <div class="tg-register tg-registershortcode col-sm-12">-->
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 pb-2">
+                    <div class="tg-textshortcode">
+                        <div class="tg-sectionhead tg-textalignleft">
+                            <div class="tg-sectionheading">
+                                <span>March 9th - 17th, 2024</span>
+                                <h2>Register early before its too late</h2>
+                            </div>
+                            <div class="tg-btnarea">
+                                <a class="tg-btn" href="#register-iframe">Register</a>
+                                <a class="tg-btn" href="#faq-section">FAQ</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <div id="tg-upcomingeventcounter"
+                         class="tg-upcomingeventcounter tg-upcomingeventcountervtwo"></div>
+                </div>
+                <!--                </div>-->
+            </div>
+        </div>
+    </section>
+
+    <section id="tg-speakers" class="tg-sectionspace tg-haslayout tg-bglight">
+        <div class="container">
+            <div class="row">
+                <div class="offset-xs-0 col-xs-12 offset-sm-0 col-sm-12 offset-md-2 col-md-8 offset-lg-2 col-lg-8">
+                    <div class="tg-sectionhead">
+                        <div class="tg-sectionheading">
+                            <h2>Success Stories</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slider main container -->
+                <div class="swiper youtube-swiper">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><iframe src="https://www.youtube.com/embed/yHtLhI5ZlbE?si=hFOeigc-XRrrf0Uk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                    <div class="swiper-slide"><iframe src="https://www.youtube.com/embed/LoKpkZ7xKg8?si=fvr6xJnnPksyUqNu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                    <div class="swiper-slide"><iframe src="https://www.youtube.com/embed/YZsI9JKntxE?si=VdKon78RNdqvVMC5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                    <div class="swiper-slide"><iframe src="https://www.youtube.com/embed/LWuKUrGREgI?si=pASmjimntUZBSQjP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                    <div class="swiper-slide"><iframe src="https://www.youtube.com/embed/yGilgcePUcs?si=Sctwb-jDtEthyJCJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                    <div class="swiper-slide"><iframe src="https://www.youtube.com/embed/OVKszfXlk00?si=1Qfz7JNiKZc50NZp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                  </div>
+                  <!-- If we need pagination -->
+                  <div class="swiper-pagination"></div>
+
+                  <!-- If we need navigation buttons -->
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+
+                  <!-- If we need scrollbar -->
+                  <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tg-sectionspace tg-haslayout tg-sectionspace ">
+        <div class="container">
+            <div class="row statistics ">
+                <div class="offset-xs-0 col-xs-12 offset-sm-0 col-sm-12 offset-md-2 col-md-8 offset-lg-2 col-lg-8">
+                    <div class="tg-sectionhead">
+                        <div class="tg-sectionheading">
+                            <h2>Previewing previous events</h2>
+                            <!--                                    <h2>Affordable event packages</h2>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <iframe class="video" src="https://www.youtube.com/embed/4tKuBfzbF-s?si=79dK5XYs9V88_sBm"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="tg-sectionspace tg-haslayout tg-sectionspace tg-bglight ">
+        <div class="container">
+            <div class="row statistics ">
+                <div class="offset-xs-0 col-xs-12 offset-sm-0 col-sm-12 offset-md-2 col-md-8 offset-lg-2 col-lg-8">
+                    <div class="tg-sectionhead">
+                        <div class="tg-sectionheading">
+                            <h2>NIT Image Gallery</h2>
+                            <!--                                    <h2>Affordable event packages</h2>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-swiper swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper gallery-swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-1.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-2.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-3.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-4.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-5.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-6.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-7.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-8.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-9.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-10.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-11.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-12.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-13.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-14.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-15.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-16.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-17.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-18.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-19.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-20.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-21.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-22.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-23.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-24.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-25.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-26.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-27.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-28.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-29.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-30.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-31.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-32.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-33.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-34.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-35.jpg" alt=""></div>
+                      <div class="swiper-slide gallery-swiper-slide"><img src="images/NITGallery/nit-36.jpg" alt=""></div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <!-- <div class="swiper-pagination"></div> -->
+  
+                    <!-- If we need navigation buttons -->
+                    <!-- <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div> -->
+  
+                    <!-- If we need scrollbar -->
+                    <!-- <div class="swiper-scrollbar"></div> -->
+                  </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="tg-sectionspace tg-haslayout">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                    <div class="tg-textshortcode">
+                        <div class="tg-sectionhead tg-textalignleft">
+                            <div class="tg-sectionheading">
+                                <!--        											<span>News from the world</span>-->
+                                <h2>Latest Blogs</h2>
+                            </div>
+                            <div class="tg-description">
+                                <p>Stay informed about the latest trends in healthcare, immigration, and
+                                    professional development. Let our community support you in your journey to
+                                    become a globally successful nurse. Empower your ambitions, broaden your
+                                    horizons, and embark on a fulfilling career path with our NCLEX Blog as your
+                                    go-to resource.
+                                </p>
+                            </div>
+                            <!--        										<div class="tg-btnarea">-->
+                            <!--        											<a class="tg-btn" href="#">Book Your Seat</a>-->
+                            <!--        											<a class="tg-btn" href="#">Meet The Team</a>-->
+                            <!--        										</div>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="tg-articles">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <article class="tg-article">
+                                    <figure><img src="images/banner/blog.jpeg" alt="image description"></figure>
+                                    <div class="tg-contentbox">
+                                        <div class="tg-title">
+                                            <h2><a href="/blog">Opportunities for Nepalese Nurses in USA, UK, and
+                                                Australia
+                                            </a></h2>
+                                        </div>
+                                        <ul class="tg-postmaradata">
+                                            <li><i class="icon-calendar-full"></i>
+                                                <time datetime="2017-12-12">Jan 20, 2024</time>
+                                            </li>
+                                        </ul>
+                                        <div class="tg-description">
+                                            <p>Nepalese nurses, are you ready to take your nursing career to
+                                                unprecedented heights? The doors to international opportunities are
+                                                wide open, ...</p>
+                                        </div>
+                                        <a class="tg-btnreadmore" href="/blog">Read more</a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--************************************
+            News & Articles End
+    *************************************-->
+</main>
+<!--************************************
+        Main End
+*************************************-->
+<!--************************************
+        Footer Start
+*************************************-->
+<footer id="tg-footer" class="tg-footer tg-haslayout border ">
+    <div class="tg-footerbar tg-bglight">
+        <a id="tg-btnscrolltop" class="tg-btnscrolltop" href="javascript:void(0);"><i
+                class="icon-chevron-up"></i></a>
+        <div class="container">
+            <div class="row">
+                <ul class="tg-socialicons pull-right">
+                    <li class="tg-facebook"><a href="https://www.facebook.com/nclexnepal.official/"><i
+                            class="fa fa-facebook"></i></a></li>
+                    <li class="tg-instagram"><a href="https://www.instagram.com/nclexnepal.official/"><i
+                            class="fa fa-instagram"></i></a></li>
+                    <li class="tg-linkedin"><a href="https://www.linkedin.com/company/nclex-nepal/"><i
+                            class="fa fa-linkedin"></i></a></li>
+                </ul>
+                <p class="tg-copyrights pull-left">2024 All Rights Reserved © Nclex Nepal</p>
             </div>
         </div>
     </div>
     <!--************************************
-            Home Slider End
+            Bottom Bar End
     *************************************-->
-    <!--************************************
-            Main Start
-    *************************************-->
-    <main id="tg-main" class="tg-main tg-haslayout">
-        <!--************************************
-                About Us Start
-        *************************************-->
-        <section id="tg-schedule" class="tg-sectionspace tg-haslayout ghttg-bgli">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-12 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">
-                        <div class="tg-headholder">
-                            <div class="tg-sectionhead ">
-                                <div class="tg-sectionheading">
-                                    <h2>Our Tour schedule</h2>
-                                </div>
-                                <h3>Western Edition</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12">
-                        <div class="event-schedule-image">
-                            <div class="image-container">
-                                <img src="images/events/western.png"/>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-        <section class="tg-haslayout tg-sectionspace tg-bgaddtocalendar">
-            <div class="container">
-                <div class="tg-eventinfo tg-eventinfovtwo">
-                    <div class="tg-eventcontent">
-                        <span>NCLEX | OET | OBA</span>
-                        <h2>Welcome to the future of nursing in </br>USA, UK & Australia</h2>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="tg-price" class="tg-sectionspace tg-haslayout ">
-            <div class="container">
-                <div class="row statistics ">
-                    <div class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-12 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">
-                        <div class="tg-sectionhead">
-                            <div class="tg-sectionheading">
-                                <h2>NCLEX Nepal at a glance</h2>
-                                <!--                                    <h2>Affordable event packages</h2>-->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-3">
-                        <div class="stat">
-                            <div class="image-holder">
-                                <img src="images/features/years-of-excellence.png"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-3">
-                        <div class="stat">
-                            <div class="image-holder">
-                                <img src="images/features/processing.png"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-3">
-                        <div class="stat">
-                            <div class="image-holder">
-                                <img src="images/features/nclex-passers.png"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-3">
-                        <div class="stat">
-                            <div class="image-holder">
-                                <img src="images/features/us-visas.png"/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="tg-askquestions tg-haslayout tg-sectionspace tg-bglight">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7" id="faq-section">
-                        <div class="tg-faqs">
-                            <div class="tg-sectionhead tg-textalignleft">
-                                <div class="tg-sectionheading">
-                                    <span>Never hesitate to ask</span>
-                                    <h2>Frequent asked questions</h2>
-                                </div>
-                            </div>
-                            <div id="tg-accordion" class="tg-accordion" role="tablist" aria-multiselectable="true">
-                                <div class="tg-panel">
-                                    <h4><span>Q.</span>Who can attend the session?</h4>
-                                    <div class="tg-panelcontent">
-                                        <div class="tg-description">
-                                            <p><span>A.</span>This seminar is exclusively for NURSES, including those
-                                                with BSC, BN, and PCL qualifications.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tg-panel">
-                                    <h4><span>Q.</span>Is entry to the seminar free?</h4>
-                                    <div class="tg-panelcontent">
-                                        <div class="tg-description">
-                                            <p><span>A.</span>Yes, entry to the seminar is absolutely free. We believe
-                                                in providing valuable information to aspiring nurses without any
-                                                financial barriers.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tg-panel">
-                                    <h4><span>Q.</span>Is Registration required?</h4>
-                                    <div class="tg-panelcontent">
-                                        <div class="tg-description">
-                                            <p><span>A.</span>Yes, registration is compulsory.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tg-panel">
-                                    <h4><span>Q.</span>How do I register for the seminar?</h4>
-                                    <div class="tg-panelcontent">
-                                        <div class="tg-description">
-                                            <p><span>A.</span>To sign up for the session, visit the Instagram profile
-                                                page at “nclexnepal.official“ and click the link provided in the bio
-                                                section.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tg-panel">
-                                    <h4><span>Q.</span>What are the key topics that will be covered in the seminar?</h4>
-                                    <div class="tg-panelcontent">
-                                        <div class="tg-description">
-                                            <p><span>A.</span>The seminar will cover crucial aspects such as:
-                                            <ul>
-                                                <li>NCLEX: National Council Licensure Examination</li>
-                                                <li>OET: Occupational English Test)</li>
-                                                <li>OBA: Outcome Based Assessment.</li>
-                                                <li>Costs: Breakdown of expenses associated with exams, certification,
-                                                    and relocation.
-                                                </li>
-                                                <li>Opportunities for Nurses: Comprehensive discussion on career
-                                                    prospects and pathways in the UK, USA, and Australia.
-                                                </li>
-                                            </ul>
-
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tg-panel">
-                                    <h4><span>Q.</span>What are the key points that will be addressed during the
-                                        seminar?</h4>
-                                    <div class="tg-panelcontent">
-                                        <div class="tg-description">
-                                            <ul>
-                                                <li>Visa Processes: Guidance on navigating visa procedures for each
-                                                    destination.
-                                                </li>
-                                                <li>Credential Evaluation: Understanding the process of having your
-                                                    credentials recognized in these countries.
-                                                </li>
-                                                <li>Job Placement Assistance: Information on resources and support
-                                                    available for securing nursing positions.
-                                                </li>
-                                                <li>Networking Opportunities: Information on building professional
-                                                    connections within the nursing community.
-                                                </li>
-                                                <li>Q&A Session: A dedicated time for attendees to ask specific
-                                                    questions and clarify doubts.
-                                                </li>
-                                            </ul>
-
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="tg-panel">
-                                    <h4><span>Q.</span>Can I bring a friend?</h4>
-                                    <div class="tg-panelcontent">
-                                        <div class="tg-description">
-                                            <p><span>A.</span>Yes, you are welcome to bring a friend who is interested
-                                                in exploring nursing opportunities abroad. However, please ensure they
-                                                are nurses and also register to guarantee their seat.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="tg-panel">
-                                    <h4><span>Q.</span>How long is the seminar expected to last?</h4>
-                                    <div class="tg-panelcontent">
-                                        <div class="tg-description">
-                                            <p><span>A.</span>The seminar is scheduled to last approximately 3 hours.
-                                                This includes presentations, Q&A sessions, and networking opportunities.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="tg-panel">
-                                    <h4><span>Q.</span>How can I contact the organizers for further information?</h4>
-                                    <div class="tg-panelcontent">
-                                        <div class="tg-description">
-                                            <p><span>A.</span>For any additional queries, you can reach out to our
-                                                organizers at 01-4168241/103.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 faq-bg-responsive">
-                        <img src="images/nursinginformationbanner.jpeg">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="tg-sectionspace tg-haslayout ">
-            <div class="container">
-                <div class="row">
-                    <div class="tg-register tg-registershortcode">
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <div class="tg-textshortcode">
-                                <div class="tg-sectionhead tg-textalignleft">
-                                    <div class="tg-sectionheading">
-                                        <span>February 7 - March 17 , 2024</span>
-                                        <h2>Register early before its too late</h2>
-                                    </div>
-                                    <div class="tg-btnarea">
-                                        <a class="tg-btn" href="#register-iframe">Register</a>
-                                        <a class="tg-btn" href="#faq-section">FAQ</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <div id="tg-upcomingeventcounter"
-                                 class="tg-upcomingeventcounter tg-upcomingeventcountervtwo"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="tg-sectionspace tg-haslayout tg-sectionspace tg-bglight">
-            <div class="container">
-                <div class="row statistics ">
-                    <div class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-12 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">
-                        <div class="tg-sectionhead">
-                            <div class="tg-sectionheading">
-                                <h2>Previewing previous events</h2>
-                                <!--                                    <h2>Affordable event packages</h2>-->
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <iframe class="video"  src="https://www.youtube.com/embed/4tKuBfzbF-s?si=79dK5XYs9V88_sBm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        			<section class="tg-sectionspace tg-haslayout">
-        				<div class="container">
-        					<div class="row">
-        						<div class="tg-newsarticles">
-        							<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-        								<div class="tg-textshortcode">
-        									<div class="tg-sectionhead tg-textalignleft">
-        										<div class="tg-sectionheading">
-<!--        											<span>News from the world</span>-->
-        											<h2>Latest Blogs</h2>
-        										</div>
-        										<div class="tg-description">
-                                                    <p>Stay informed about the latest trends in healthcare, immigration, and professional development. Let our community support you in your journey to become a globally successful nurse. Empower your ambitions, broaden your horizons, and embark on a fulfilling career path with our NCLEX Blog as your go-to resource.
-                                                    </p>
-        										</div>
-<!--        										<div class="tg-btnarea">-->
-<!--        											<a class="tg-btn" href="#">Book Your Seat</a>-->
-<!--        											<a class="tg-btn" href="#">Meet The Team</a>-->
-<!--        										</div>-->
-        									</div>
-        								</div>
-        							</div>
-        							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-        								<div class="tg-articles">
-        									<div class="row">
-        										<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        											<article class="tg-article">
-        												<figure><img src="images/banner/blog.jpeg" alt="image description"></figure>
-        												<div class="tg-contentbox">
-        													<div class="tg-title">
-        														<h2><a href="/blog">Opportunities for Nepalese Nurses in USA, UK, and Australia
-                                                                </a></h2>
-        													</div>
-        													<ul class="tg-postmaradata">
-        														<li><i class="icon-calendar-full"></i><time datetime="2017-12-12">Jan 20, 2024</time></li>
-        													</ul>
-        													<div class="tg-description">
-        														<p>Nepalese nurses, are you ready to take your nursing career to unprecedented heights? The doors to international opportunities are wide open, especially ...</p>
-        													</div>
-        													<a class="tg-btnreadmore" href="/blog">Read more</a>
-        												</div>
-        											</article>
-        										</div>
-        									</div>
-        								</div>
-        							</div>
-        						</div>
-        					</div>
-        				</div>
-        			</section>
-        <!--************************************
-                News & Articles End
-        *************************************-->
-    </main>
-    <!--************************************
-            Main End
-    *************************************-->
-    <!--************************************
-            Footer Start
-    *************************************-->
-    <footer id="tg-footer" class="tg-footer tg-haslayout border ">
-        <div class="tg-footerbar tg-bglight">
-            <a id="tg-btnscrolltop" class="tg-btnscrolltop" href="javascript:void(0);"><i
-                    class="icon-chevron-up"></i></a>
-            <div class="container">
-                <div class="row">
-                    <ul class="tg-socialicons pull-right">
-                        <li class="tg-facebook"><a href="https://www.facebook.com/nclexnepal.official/"><i
-                                class="fa fa-facebook"></i></a></li>
-                        <li class="tg-instagram"><a href="https://www.instagram.com/nclexnepal.official/"><i
-                                class="fa fa-instagram"></i></a></li>
-                        <li class="tg-linkedin"><a href="https://www.linkedin.com/company/nclex-nepal/"><i
-                                class="fa fa-linkedin"></i></a></li>
-                    </ul>
-                    <p class="tg-copyrights pull-left">2024 All Rights Reserved © Nclex Nepal</p>
-                </div>
-            </div>
-        </div>
-        <!--************************************
-                Bottom Bar End
-        *************************************-->
-    </footer>
-    <!--************************************
-            Footer End
-    *************************************-->
+</footer>
+<!--************************************
+        Footer End
+*************************************-->
 </div>
 <!--************************************
         Wrapper End
 *************************************-->
+<script>
+    $('#recipeCarousel').carousel({
+        interval: 10000
+    })
+
+    $('.carousel .carousel-item').each(function(){
+        var minPerSlide = 3;
+        var next = $(this).next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($(this));
+
+        for (var i=0;i<minPerSlide;i++) {
+            next=next.next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+
+            next.children(':first-child').clone().appendTo($(this));
+        }
+    });
+
+    // $(function(){
+    //     $("#iframe-register").on("load", function(e){
+    //         console.log($(this).children().html());
+    //     });
+    // });
+
+</script>
+
 <script src="js/vendor/jquery-library.js"></script>
-<script src="js/vendor/bootstrap.min.js"></script>
+<!--<script src="js/vendor/bootstrap.min.js"></script>-->
 <script src="https://maps.google.com/maps/api/js?key=AIzaSyCR-KEWAVCn52mSdeVeTqZjtqbmVJyfSus&language=en"></script>
 <script src="js/jquery.singlePageNav.min.js"></script>
 <script src="js/photoswipe-ui-default.js"></script>
 <script src="js/customScrollbar.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/photoswipe.min.js"></script>
-<script src="js/prettyPhoto.js"></script>
-<script src="js/tilt.jquery.js"></script>
 <script src="js/countdown.js"></script>
-<script src="js/parallax.js"></script>
-<script src="js/gmap3.js"></script>
+<script src="js/swiper.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
