@@ -803,9 +803,9 @@ body.tg-homefive{padding:0;}
 	background:#fff;
 	position: absolute;
 }
-.mainbanner{
+/* .mainbanner{
 	height: calc(100vh - 53px)
-}
+} */
 .iframe{
 	height: inherit
 }
@@ -4354,7 +4354,27 @@ body.tg-fixedme .tg-headervtwo:before{display:none;}
 	object-position: center;
 }
 
+.main-banner-wrapper {
+	position: relative;
+}
 
+.main-banner-wrapper img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: center center;
+}
+
+.main-banner-wrapper::after {
+	z-index: -1;
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: url("/images/banner/eastern-top-banner.jpg");
+	filter: brightness(0.7);
+	background-size: cover;
+	opacity: 0.2;
+}
 
 .tg-btnarea .tg-btn + .tg-btn.btn-faq {
 	margin-top: 10px;
@@ -4386,4 +4406,8 @@ body.tg-fixedme .tg-headervtwo:before{display:none;}
 	.tg-btnarea .tg-btn + .tg-btn.btn-faq {
 		margin: 0 0 0 25px;
 	}
+}
+
+@media screen and (min-width: 992px) {
+
 }
