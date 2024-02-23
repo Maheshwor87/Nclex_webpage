@@ -7,14 +7,14 @@ const mobileNav = document.getElementById('mobile-nav');
 let lastScrollTop = 0;
 
 menuBtn.addEventListener('click', () => {
-  if(mobileNav.classList.contains('expanded')){
+  if (mobileNav.classList.contains('expanded')) {
     mobileNav.classList.remove('expanded');
     menuIcon.innerText = 'menu';
   } else {
-    mobileNav.classList.add('expanded')
+    mobileNav.classList.add('expanded');
     menuIcon.innerText = 'close';
   }
-})
+});
 
 function pageOffsetChecker() {
   let scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -37,7 +37,10 @@ pageOffsetChecker();
 
 window.addEventListener('scroll', pageOffsetChecker);
 
-const isDesktop = window.innerWidth > 1023;
+let isDesktop = window.innerWidth > 1023;
+// window.addEventListener('resize', () => {
+//   isDesktop = window.innerWidth > 1023;
+// });
 
 let headerTranslate;
 let headerDuration;
@@ -287,58 +290,29 @@ if (isDesktop) {
   // Animation for why nclex  nepal
   const tl3 = gsap.timeline({
     scrollTrigger: {
-      trigger: '#why-nclex-head',
+      trigger: '.reason-1',
     },
   });
 
-  if (isDesktop) {
-    tl3
-      .to('.reason-4', {
-        scale: 1,
-        opacity: 1,
-        duration: 0.4,
-      })
-      .to('.reason-3', {
-        scale: 1,
-        opacity: 1,
-        duration: 0.4,
-        delay: -0.2,
-      })
-      .to('.reason-2', {
-        scale: 1,
-        opacity: 1,
-        duration: 0.4,
-        delay: -0.2,
-      })
-      .to('.reason-1', {
-        scale: 1,
-        opacity: 1,
-        duration: 0.4,
-        delay: -0.2,
-      });
-  } else {
-    tl3
-      .to('.reason-1', {
-        scale: 1,
-        opacity: 1,
-        duration: 0.4,
-      })
-      .to('.reason-2', {
-        scale: 1,
-        opacity: 1,
-        duration: 0.4,
-      })
-      .to('.reason-3', {
-        scale: 1,
-        opacity: 1,
-        duration: 0.4,
-      })
-      .to('.reason-4', {
-        scale: 1,
-        opacity: 1,
-        duration: 0.4,
-      });
-  }
+  tl3
+    .to('.reason-3', {
+      scale: 1,
+      opacity: 1,
+      duration: 0.4,
+      delay: -0.2,
+    })
+    .to('.reason-2', {
+      scale: 1,
+      opacity: 1,
+      duration: 0.4,
+      delay: -0.2,
+    })
+    .to('.reason-1', {
+      scale: 1,
+      opacity: 1,
+      duration: 0.4,
+      delay: -0.2,
+    });
 
   const tl4 = gsap.timeline({
     scrollTrigger: {
@@ -348,24 +322,18 @@ if (isDesktop) {
   });
 
   tl4
+    .to('.reason-4', {
+      scale: 1,
+      opacity: 1,
+      duration: 0.4,
+    })
     .to('.reason-5', {
       scale: 1,
       opacity: 1,
       duration: 0.4,
+      delay: -0.2,
     })
     .to('.reason-6', {
-      scale: 1,
-      opacity: 1,
-      duration: 0.4,
-      delay: -0.2,
-    })
-    .to('.reason-7', {
-      scale: 1,
-      opacity: 1,
-      duration: 0.4,
-      delay: -0.2,
-    })
-    .to('.reason-8', {
       scale: 1,
       opacity: 1,
       duration: 0.4,
@@ -401,5 +369,21 @@ if (isDesktop) {
     duration: 0.6,
     delay: 0.2,
     scrollTrigger: '.our-product-container',
+  });
+
+  const demoAnimation = gsap.to('.click-text', {
+    y: 0,
+    opacity: 1,
+    duration: 0.4,
+    ease: 'ease.inOut',
+    paused: true,
+  });
+
+  const productImage = document.querySelector('.our-product-container');
+  productImage.addEventListener('mouseenter', () => {
+    demoAnimation.play();
+  });
+  productImage.addEventListener('mouseleave', () => {
+    demoAnimation.reverse();
   });
 }

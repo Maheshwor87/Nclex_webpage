@@ -145,3 +145,20 @@ h6 {
 #hamburger-icon {
   transition: all 400ms ease;
 }
+
+.our-product-container .try-overlay {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.5s ease;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.our-product-container:hover .try-overlay {
+  opacity: 1;
+  transition: opacity 400ms ease;
+}
+
+.try-overlay .click-text {
+  background: linear-gradient(to top left, #105abc 30%, #6fbb4c);
+  /* background: #113b72; */
+}
