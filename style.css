@@ -31,6 +31,11 @@ h6 {
   font-family: 'Montserrat', sans-serif;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 .sub-heading {
   position: relative;
 }
@@ -146,19 +151,47 @@ h6 {
   transition: all 400ms ease;
 }
 
-.our-product-container .try-overlay {
+.our-product-container .try-overlay,
+.event-banner-container .try-overlay {
   opacity: 0;
   pointer-events: none;
-  transition: opacity 1.5s ease;
-  background: rgba(0, 0, 0, 0.2);
+  transition: opacity 1s ease;
+  background: rgba(0, 0, 0, 0.15);
 }
 
-.our-product-container:hover .try-overlay {
+.our-product-container:hover .try-overlay,
+.event-banner-container:hover .try-overlay {
   opacity: 1;
   transition: opacity 400ms ease;
 }
 
-.try-overlay .click-text {
-  background: linear-gradient(to top left, #105abc 30%, #6fbb4c);
-  /* background: #113b72; */
+/* .try-overlay .click-text,
+.try-overlay .click-text-event {
+  background: linear-gradient(to top left, #0a4096 30%, #6cbf4f);
+  background: #113b72;
+} */
+
+.fade-in {
+  animation: fade-in 500ms ease;
+}
+
+.fade-out {
+  animation: fade-out 200ms ease;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
