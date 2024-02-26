@@ -182,7 +182,7 @@
     </div>
     <div id="root-app" class="mx-auto xl:px-0">
       <div
-        class="courses-container bg-[#f4f8fd] xl:py-[80px] lg:py-[60px] md:py-[40px] py-[20px] xl:mt-[80px] lg:mt-[60px] md:mt-[40px] mt-[20px]"
+        class="courses-container bg-[#f4f8fd] lg:py-[60px] md:py-[40px] py-[20px] xl:mt-[80px] lg:mt-[60px] md:mt-[40px]"
       >
         <h2
           id="courses"
@@ -190,115 +190,131 @@
         >
           Our Courses
         </h2>
-        <div id="course-card-wrapper" class="wrapper">
+
+        <div id="course-card-wrapper" class="max-w-[1000px] mx-auto px-4">
+          <!-- First card -->
           <div
-            class="xl:w-[80%] w-[95%] mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 xl:gap-x-8 gap-x-4 lg:gap-y-4 gap-y-6"
+            class="card-1 course-card flex items-center lg:gap-8 md:gap-5 gap-3 text-left lg:py-[50px] md:py-[30px] py-[20px]"
           >
-            <div
-              class="bg-[#ffffff] shadow-sm rounded-xl flex flex-col justify-between"
-            >
-              <div>
-                <div
-                  class="course-header grid place-items-center rounded-[12px_12px_0_0] h-[180px] bg-gradient-to-br from-[#6CBF4F] to-[#297bff] text-white font-bold md:text-xl text-lg relative"
-                >
-                  <img
-                    src="images/nurse-5.png"
-                    alt="Nclex nurse"
-                    class="absolute bottom-0 h-[200px] drop-shadow-xl"
-                  />
-                </div>
-                <div class="mt-2 font-semibold text-xl text-center">
-                  NCLEX RN
-                </div>
-                <p class="md:py-2 py-3 px-3">
-                  The National Council Licensure Examination RN is an
-                  examination for licensing nurses and midwives to USA, UK and
-                  Middle East allowing them to practice their profession in the
-                  accepted countries.
-                </p>
+            <div class="card-left">
+              <div
+                class="card-title font-semibold lg:text-2xl md:text-xl text-base lg:mb-6 md:mb-4 mb-2"
+              >
+                NCLEX RN
+              </div>
+              <div class="card-body lg:mb-6 mb-4 lg:text-xl md:text-lg text-sm">
+                The National Council Licensure Examination RN is an examination
+                for licensing nurses and midwives to USA, UK and Middle East
+                allowing them to practice their profession in the accepted
+                countries.
               </div>
               <a
                 href="https://office.nclexinnepal.com/inquiry-form"
                 target="_blank"
-                class="bg-gradient-to-br from-[#6CBF4F] to-[#297bff] text-white mx-auto block m-3 px-3 py-2 rounded-[10px_2px]"
+                class="bg-gradient-to-br from-[#C173D8] to-[#CF72C5] text-white block w-fit md:px-3 md:py-2 rounded-[10px_2px] px-2 py-1"
               >
                 Enroll Now
               </a>
             </div>
-            <div
-              class="bg-[#ffffff] shadow-sm rounded-xl flex flex-col justify-between"
-            >
-              <div>
-                <div
-                  class="course-header grid place-items-center rounded-[12px_12px_0_0] h-[180px] bg-gradient-to-br from-[#6CBF4F] to-[#297bff] text-white font-bold md:text-xl text-lg relative"
-                >
-                  <img
-                    src="images/nurse-2.png"
-                    alt="Nclex nurse"
-                    class="absolute bottom-0 h-[200px] drop-shadow-xl"
-                  />
-                </div>
-                <div class="mt-2 font-semibold text-xl text-center">
-                  OET / CBT
-                </div>
-                <p class="md:py-2 py-3 px-4">
-                  NCLEX Nepal is the leading OET coaching centre in NEPAL
-                  providing quality training for healthcare professionals who
-                  wants to work in many English speaking countries.
-                </p>
-              </div>
-              <a
-                href="https://office.nclexinnepal.com/inquiry-form"
-                target="_blank"
-                class="bg-gradient-to-br from-[#6CBF4F] to-[#297bff] text-white mx-auto block m-3 px-3 py-2 rounded-[10px_2px]"
-              >
-                Enroll Now
-              </a>
+            <div class="card-right relative w-[500px]">
+              <img
+                src="images/nurse-5.png"
+                alt="nclex nurse"
+                class="w-full relative z-[2]"
+              />
+              <img
+                src="Ellipse_2.png"
+                alt="ellipse background"
+                class="w-full absolute bottom-0 z-[1]"
+              />
             </div>
-            <div
-              class="bg-[#ffffff] shadow-sm rounded-xl flex flex-col justify-between"
-            >
-              <div>
-                <div
-                  class="course-header grid place-items-center rounded-[12px_12px_0_0] h-[180px] bg-gradient-to-br from-[#6CBF4F] to-[#297bff] text-white font-bold md:text-xl text-lg relative"
-                >
-                  <img
-                    src="images/nurse-4.png"
-                    alt="Nclex nurse"
-                    class="absolute bottom-0 h-[200px] drop-shadow-xl"
-                  />
-                </div>
-                <div class="mt-2 font-semibold text-xl text-center">
-                  Prometric / DHA / HAAD
-                </div>
-                <p class="md:py-2 py-3 px-4">
-                  NCLEX Nepal is renowned for delivering top-notch coaching in
-                  Prometric, DHA, and HAAD, providing exceptional learning
-                  experiences with a focus on quality education.
-                </p>
+          </div>
+          <!-- Second card -->
+          <div
+            class="card-2 course-card flex items-center lg:gap-8 md:gap-5 gap-3 text-left lg:py-[50px] md:py-[30px] py-[20px]"
+          >
+            <div class="card-left relative w-[500px]">
+              <img
+                src="images/nurse-2.png"
+                alt="nclex nurse"
+                class="w-full relative z-[2]"
+              />
+              <img
+                src="Vector_3.png"
+                alt="ellipse background"
+                class="w-full absolute bottom-0 z-[1]"
+              />
+            </div>
+            <div class="card-right">
+              <div
+                class="card-title font-semibold lg:text-2xl md:text-xl text-base lg:mb-6 md:mb-4 mb-2"
+              >
+                OET / CBT
+              </div>
+              <div class="card-body lg:mb-6 mb-4 lg:text-xl md:text-lg text-sm">
+                NCLEX Nepal is the leading OET coaching centre in NEPAL
+                providing quality training for healthcare professionals who
+                wants to work in many English speaking countries.
               </div>
               <a
                 href="https://office.nclexinnepal.com/inquiry-form"
                 target="_blank"
-                class="bg-gradient-to-br from-[#6CBF4F] to-[#297bff] text-white mx-auto block m-3 px-3 py-2 rounded-[10px_2px] self-end"
+                class="bg-gradient-to-br from-[#E15A83] to-[#D35E53] text-white block w-fit md:px-3 md:py-2 rounded-[10px_2px] px-2 py-1"
               >
                 Enroll Now
               </a>
             </div>
           </div>
+          <!-- Third card -->
+          <div
+            class="card-3 course-card flex items-center lg:gap-8 md:gap-5 gap-3 text-left lg:py-[50px] md:py-[30px] py-[20px]"
+          >
+            <div class="card-left">
+              <div
+                class="card-title font-semibold lg:text-2xl md:text-xl text-base lg:mb-6 md:mb-4 mb-2"
+              >
+                Prometric / DHA / HAAD
+              </div>
+              <div class="card-body lg:mb-6 mb-4 lg:text-xl md:text-lg text-sm">
+                NCLEX Nepal is renowned for delivering top-notch coaching in
+                Prometric, DHA, and HAAD, providing exceptional learning
+                experiences with a focus on quality education.
+              </div>
+              <a
+                href="https://office.nclexinnepal.com/inquiry-form"
+                target="_blank"
+                class="bg-gradient-to-br from-[#839B5E] to-[#7A9E77] text-white block w-fit md:px-3 md:py-2 rounded-[10px_2px] px-2 py-1"
+              >
+                Enroll Now
+              </a>
+            </div>
+            <div class="card-right relative w-[500px]">
+              <img
+                src="images/nurse-4.png"
+                alt="nclex nurse"
+                class="w-full relative z-[2]"
+              />
+              <img
+                src="Vector_5.png"
+                alt="ellipse background"
+                class="w-full absolute bottom-0 z-[1]"
+              />
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="wrapper">
+      <div class="wrapper xl:py-10 lg:py-8 md:py-6 py-4">
+        <h2
+          id="about-us"
+          class="about-us sub-heading font-medium text-slate-800 xl:text-4xl md:text-3xl sm:text-2xl text-xl md:mb-[80px] sm:mb-[60px] mb-[40px] text-center"
+        >
+          About us
+        </h2>
         <div
-          class="about-us-content-wrapper xl-10 lg:py-8 md:py-6 py-4 md:grid md:grid-cols-4 flex flex-col-reverse xl:gap-8 lg:gap-8 md:gap-4 gap-0 grid-cols-1"
+          class="about-us-content-wrapper md:grid md:grid-cols-4 flex flex-col-reverse xl:gap-[80px] lg:gap-[50px] gap-[30px] grid-cols-1"
         >
           <div id="about-us-main-content" class="md:col-span-3">
-            <h2
-              class="font-semibold xl:text-4xl md:text-3xl text-xl md:mt-0 mt-[10px] md:mb-[15px] mb-[5px] text-[#113b72] md:text-left text-center"
-            >
-              About Us
-            </h2>
             <p class="text-justify mb-4 text-slate-700">
               Welcome to Nclex Nepal Pvt Ltd, where your journey to
               international healthcare excellence begins. As a premier Nclex
@@ -364,13 +380,13 @@
             </div>
             <p
               id="about-toggler"
-              class="text-[#11397E] cursor-pointer select-none"
+              class="text-[#7A9E77] cursor-pointer select-none"
             >
-              ...Read More
+              Show More >>>
             </p>
           </div>
           <div
-            class="about-us-image-container lg:rounded-xl rounded-md overflow-hidden mb-4 self-start md:w-full w-[50%] mx-auto"
+            class="about-us-image-container lg:rounded-xl rounded-md overflow-hidden self-start md:w-full w-[50%] mx-auto"
           >
             <img src="nclex/nclex-logo.png" alt="nclex team image" />
           </div>
@@ -378,32 +394,36 @@
       </div>
 
       <div class="bg-[#F4F8FD] py-10">
+        <h2
+          id="message-founder"
+          class="message-founder sub-heading font-medium text-slate-800 xl:text-4xl md:text-3xl sm:text-2xl text-xl md:mb-[80px] sm:mb-[60px] mb-[40px] text-center"
+        >
+          Message from the Founder CEO
+        </h2>
         <div class="wrapper">
           <div
             id="message-container"
-            class="message-container grid md:grid-cols-3 grid-cols-1 xl:gap-8 lg:gap-6 md:gap-4 gap-2"
+            class="message-container grid md:grid-cols-3 grid-cols-1 xl:gap-[80px] lg:gap-[50px] gap-[30px]"
           >
             <div
               id="ceo-image"
-              class="rounded-lg overflow-hidden self-start shadow-[0_0_10px_rgba(0,0,0,0.1)] w-full sm:w-[60%] mx-auto md:w-full"
+              class="overflow-hidden md:rounded-[60px_5px] rounded-[40px_5px] self-start shadow-[4px_4px_4px_rgba(59,130,246,0.35)] mx-auto aspect-square"
             >
-              <img src="images/nclex-ceo.jpg" alt="ceo image" class="w-full" />
+              <img
+                src="images/nclex-ceo.jpg"
+                alt="ceo image"
+                class="w-full h-full object-cover object-center"
+              />
             </div>
             <div id="ceo-message" class="md:col-span-2 col-span-1">
-              <h3
-                id="ceo-message-text"
-                class="font-semibold xl:text-4xl md:text-3xl text-xl md:mt-0 mt-[15px] md:mb-[15px] mb-[5px] text-[#113b72] text-left"
-              >
-                Message from the Founder CEO
-              </h3>
               <p
                 id="esteemed-text"
-                class="font-medium md:text-xl text-lg mb-[10px] text-left"
+                class="font-bold text-slate-700 md:text-xl text-lg lg:mb-[20px] mb-[10px] text-left"
               >
                 Dear Esteemed Healthcare Professionals,
               </p>
 
-              <p class="mb-2 text-justify">
+              <p class="lg:mb-4 mb-2 text-justify">
                 I am thrilled to address you as the Founder CEO of Nclex Nepal
                 Pvt Ltd, a dynamic organization committed to shaping the future
                 of healthcare professionals from Nepal. Since our inception in
@@ -411,7 +431,7 @@
                 doctors and nurses in realizing their dreams of becoming
                 international healthcare professionals.
               </p>
-              <p class="mb-2 text-justify hidden md:block">
+              <p class="lg:mb-4 mb-2 text-justify hidden md:block">
                 As we celebrate our 5th year, I reflect on the extraordinary
                 heights we've reached and the lives we've positively impacted.
                 Nclex Nepal is not just a review center; it's a conduit for your
@@ -420,7 +440,7 @@
                 unwavering commitment to excellence.
               </p>
               <div id="expandable-content" class="hidden text-justify">
-                <p class="mb-2 text-justify md:hidden block">
+                <p class="lg:mb-4 mb-2 text-justify md:hidden block">
                   As we celebrate our 5th year, I reflect on the extraordinary
                   heights we've reached and the lives we've positively impacted.
                   Nclex Nepal is not just a review center; it's a conduit for
@@ -428,7 +448,7 @@
                   but a testament to the transformative power of our work ethics
                   and unwavering commitment to excellence.
                 </p>
-                <p class="mb-2">
+                <p class="lg:mb-4 mb-2">
                   We take pride in being your partner on the path to success,
                   not just academically but professionally. Nclex Nepal is not
                   just about passing exams; it's about preparing you for a
@@ -436,14 +456,14 @@
                   your destination is the USA, Australia, or the UK, we are here
                   to guide you every step of the way.
                 </p>
-                <p class="mb-2">
+                <p class="lg:mb-4 mb-2">
                   Our team of seasoned professionals and educators stands ready
                   to provide comprehensive support tailored to your unique
                   journey. We understand the challenges you face, and we are
                   dedicated to ensuring you are not just exam-ready but equipped
                   for the demands of the international healthcare arena.
                 </p>
-                <p class="mb-2">
+                <p class="lg:mb-4 mb-2">
                   At Nclex Nepal, we believe in fostering a community of
                   healthcare professionals who are not just competent but
                   compassionate, not just qualified but transformative. As the
@@ -459,9 +479,9 @@
               </div>
               <p
                 id="readmore-toggler"
-                class="mb-4 text-[#11397E] cursor-pointer select-none"
+                class="mb-4 text-[#7A9E77] cursor-pointer select-none"
               >
-                ...Read More
+                Show More >>>
               </p>
               <p class="mb-4">Warm regards,</p>
               <p class="font-bold text-[#113b72]">Mahesh Ghimire</p>

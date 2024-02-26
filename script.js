@@ -3,18 +3,19 @@ let aboutCollapsedState = true;
 
 const readMoreToggler = document.getElementById('readmore-toggler');
 const expandable = document.getElementById('expandable-content');
+const ceoImg = document.getElementById('ceo-img');
 
 readMoreToggler.addEventListener('click', () => {
   readMoreState = !readMoreState;
   if (readMoreState) {
     // expandable.style.display = 'none';
-    readMoreToggler.innerText = '...Read More';
+    readMoreToggler.innerText = 'Show More >>>';
     expandable.classList.remove('fade-in');
     expandable.classList.add('fade-out');
     return;
   }
   expandable.style.display = 'block';
-  readMoreToggler.innerText = '...Show Less';
+  readMoreToggler.innerText = '<<< Show Less';
   expandable.classList.remove('fade-out');
   expandable.classList.add('fade-in');
 });
@@ -32,13 +33,13 @@ aboutToggler.addEventListener('click', () => {
   aboutCollapsedState = !aboutCollapsedState;
   if (aboutCollapsedState) {
     // expandable.style.display = 'none';
-    aboutToggler.innerText = '...Read More';
+    aboutToggler.innerText = 'Show More >>>';
     expandableAbout.classList.remove('fade-in');
     expandableAbout.classList.add('fade-out');
     return;
   }
   expandableAbout.style.display = 'block';
-  aboutToggler.innerText = '...Show Less';
+  aboutToggler.innerText = '<<< Show Less';
   expandableAbout.classList.remove('fade-out');
   expandableAbout.classList.add('fade-in');
 });

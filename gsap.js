@@ -132,19 +132,33 @@ if (isDesktop) {
     scrollTrigger: '.courses',
   });
 
-  const timeCourse = gsap.timeline({
-    scrollTrigger: {
-      trigger: isDesktop ? '#course-card-wrapper' : '#course',
-    },
-  });
-
-  timeCourse.from('#course-card-wrapper', {
+  gsap.from('.card-1', {
     y: 150,
     opacity: 0,
     duration: 0.8,
+    scrollTrigger: '.card-1',
+  });
+  gsap.from('.card-2', {
+    y: 150,
+    opacity: 0,
+    duration: 0.8,
+    scrollTrigger: '.card-2',
+  });
+  gsap.from('.card-3', {
+    y: 150,
+    opacity: 0,
+    duration: 0.8,
+    scrollTrigger: '.card-3',
   });
 
   // About us section
+
+  gsap.from('#about-us', {
+    y: headerTranslate,
+    opacity: 0,
+    duration: headerDuration,
+    scrollTrigger: '#about-us',
+  });
 
   gsap.from('.about-us-content-wrapper', {
     y: 100,
@@ -154,6 +168,13 @@ if (isDesktop) {
   });
 
   // CEO Section
+
+  gsap.from('#message-founder', {
+    y: headerTranslate,
+    opacity: 0,
+    duration: headerDuration,
+    scrollTrigger: '#message-founder',
+  });
 
   const tceo = gsap.timeline({
     scrollTrigger: {
@@ -219,12 +240,6 @@ if (isDesktop) {
     duration: headerDuration,
     scrollTrigger: '.why-nclex',
   });
-  gsap.from('.card', {
-    y: 50,
-    opacity: 0,
-    duration: 1,
-    scrollTrigger: '.card',
-  });
   gsap.from('#future-text', {
     y: 100,
     opacity: 0,
@@ -243,8 +258,6 @@ if (isDesktop) {
     duration: 1,
     scrollTrigger: '#warmth-text',
   });
-
-  // Animation for glance cards
 
   // Animation for success stories
   const tl1 = gsap.timeline({
@@ -293,6 +306,22 @@ if (isDesktop) {
         delay: -0.4,
       });
   }
+
+  // Success heads
+
+  gsap.from('#success-heads', {
+    y: headerTranslate,
+    opacity: 0,
+    duration: headerDuration,
+    scrollTrigger: '#success-heads',
+  });
+
+  gsap.from('.success-container', {
+    y: 150,
+    opacity: 0,
+    duration: 0.8,
+    scrollTrigger: '.success-container',
+  });
 
   // Animation for testimonials
   const tl2 = gsap.timeline({
@@ -422,6 +451,15 @@ if (isDesktop) {
   });
   eventImage.addEventListener('mouseleave', () => {
     eventAnimation.reverse();
+  });
+
+  // NIT tour gallery
+
+  gsap.from('#gallery', {
+    y: headerTranslate,
+    opacity: 0,
+    duration: headerDuration,
+    scrollTrigger: '#gallery',
   });
 
   // Products section
