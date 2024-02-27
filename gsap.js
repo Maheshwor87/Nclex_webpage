@@ -178,7 +178,7 @@ if (isDesktop) {
 
   const tceo = gsap.timeline({
     scrollTrigger: {
-      trigger: '#ceo-message',
+      trigger: '#message-founder',
     },
   });
 
@@ -186,7 +186,7 @@ if (isDesktop) {
     .from('#ceo-image', {
       opacity: 0,
       duration: 0.8,
-      delay: 0.5,
+      delay: 0.2,
     })
     .from('#ceo-message', {
       opacity: 0,
@@ -321,6 +321,12 @@ if (isDesktop) {
     opacity: 0,
     duration: 0.8,
     scrollTrigger: '.success-container',
+  });
+  gsap.from('#view-all', {
+    y: 80,
+    opacity: 0,
+    duration: 0.8,
+    scrollTrigger: '#view-all',
   });
 
   // Animation for testimonials
