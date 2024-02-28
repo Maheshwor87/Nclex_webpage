@@ -152,7 +152,8 @@ img {
 }
 
 .our-product-container .try-overlay,
-.event-banner-container .try-overlay {
+.event-banner-container .try-overlay,
+.recruit-img-container .try-overlay {
   opacity: 0;
   pointer-events: none;
   transition: opacity 1s ease;
@@ -160,7 +161,8 @@ img {
 }
 
 .our-product-container:hover .try-overlay,
-.event-banner-container:hover .try-overlay {
+.event-banner-container:hover .try-overlay,
+.recruit-img-container:hover .try-overlay {
   opacity: 1;
   transition: opacity 400ms ease;
 }

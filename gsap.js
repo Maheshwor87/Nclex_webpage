@@ -499,4 +499,13 @@ if (isDesktop) {
   productImage.addEventListener('mouseleave', () => {
     demoAnimation.reverse();
   });
+
+  // const recruitAnimation = gsap.to('.click-text-recruit', {
+  //   y: 0,
+  //   opacity: 1,
+  //   duration: 0.4,
+  //   ease: 'ease.inOut',
+  //   paused: true,
+  // })
+
 }
