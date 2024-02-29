@@ -26,29 +26,29 @@ expandable.addEventListener('animationend', () => {
   }
 });
 
-const aboutToggler = document.getElementById('about-toggler');
-const expandableAbout = document.getElementById('expandable-about');
+// const aboutToggler = document.getElementById('about-toggler');
+// const expandableAbout = document.getElementById('expandable-about');
 
-aboutToggler.addEventListener('click', () => {
-  aboutCollapsedState = !aboutCollapsedState;
-  if (aboutCollapsedState) {
-    // expandable.style.display = 'none';
-    aboutToggler.innerText = 'Show More >>>';
-    expandableAbout.classList.remove('fade-in');
-    expandableAbout.classList.add('fade-out');
-    return;
-  }
-  expandableAbout.style.display = 'block';
-  aboutToggler.innerText = '<<< Show Less';
-  expandableAbout.classList.remove('fade-out');
-  expandableAbout.classList.add('fade-in');
-});
+// aboutToggler.addEventListener('click', () => {
+//   aboutCollapsedState = !aboutCollapsedState;
+//   if (aboutCollapsedState) {
+//     // expandable.style.display = 'none';
+//     aboutToggler.innerText = 'Show More >>>';
+//     expandableAbout.classList.remove('fade-in');
+//     expandableAbout.classList.add('fade-out');
+//     return;
+//   }
+//   expandableAbout.style.display = 'block';
+//   aboutToggler.innerText = '<<< Show Less';
+//   expandableAbout.classList.remove('fade-out');
+//   expandableAbout.classList.add('fade-in');
+// });
 
-expandableAbout.addEventListener('animationend', () => {
-  if (expandableAbout.classList.contains('fade-out')) {
-    expandableAbout.style.display = 'none';
-  }
-});
+// expandableAbout.addEventListener('animationend', () => {
+//   if (expandableAbout.classList.contains('fade-out')) {
+//     expandableAbout.style.display = 'none';
+//   }
+// });
 
 // Swiper options
 
@@ -98,7 +98,7 @@ viewAllBtn.addEventListener('click', function (e) {
     clearTimeout(timeoutId);
     timeoutId = setTimeout(() => {
       viewAllBtn.innerText = 'View All';
-    }, 500);
+    }, 250);
     return;
   }
   success.style.maxHeight = '2000px';

@@ -192,7 +192,7 @@
           >
             <div
               id="ceo-image"
-              class="overflow-hidden md:rounded-[60px_5px] sm:rounded-[40px_5px] rounded-[25px_5px] self-start shadow-[4px_4px_4px_rgba(59,130,246,0.35)] mx-auto aspect-square sm:w-auto w-[150px]"
+              class="overflow-hidden md:rounded-[60px_5px] sm:rounded-[40px_5px] rounded-[25px_5px] self-start shadow-[4px_4px_4px_rgba(59,130,246,0.35)] mx-auto aspect-square md:w-auto sm:w-[50%] w-[40%]"
             >
               <img
                 src="images/nclex-ceo.jpg"
@@ -423,49 +423,46 @@
         >
           About us
         </h2>
-        <div
-          class="about-us-content-wrapper md:grid md:grid-cols-4 flex flex-col-reverse xl:gap-[80px] lg:gap-[50px] gap-[30px] grid-cols-1"
-        >
-          <div id="about-us-main-content" class="md:col-span-3">
-            <p class="text-justify mb-4 text-slate-700">
-              Welcome to Nclex Nepal Pvt Ltd, where your journey to
-              international healthcare excellence begins. As a premier Nclex
-              Review Center, we take pride in not only preparing nurses for
-              success in their Nclex examinations but also in guiding them
-              towards lucrative employment opportunities in the USA and
-              Australia. Additionally, Nclex Nepal is committed to supporting
-              healthcare professionals in their pursuit of career growth in the
-              UK, offering a specialized OET pathway for seamless relocation.
-            </p>
-            <p class="text-justify mb-4 text-slate-700 hidden md:block">
-              Established in 2019, Nclex Nepal has rapidly evolved into a
-              dynamic organization dedicated to empowering doctors and nurses
-              from Nepal to achieve their dreams of becoming international
-              healthcare professionals. With a track record of assisting over
-              3000 individuals, we stand as a testament to the transformative
-              impact we have had on the lives and careers of healthcare
-              aspirants.
-            </p>
-            <p class="text-justify mb-4 text-slate-700 hidden lg:block">
-              What sets us apart in our 5 years of operation is not just our
-              youthfulness but the distinctive heights we have scaled in the
-              field. At the core of our success lies a set of unwavering work
-              ethics that drive our commitment to excellence. Our success
-              stories are not just narratives; they are living testimonials of
-              the quality of education, guidance, and support that every
-              individual receives at Nclex Nepal.
-            </p>
-            <div id="expandable-about" class="hidden">
-              <p class="text-justify mb-4 text-slate-700 md:hidden block">
-                Established in 2019, Nclex Nepal has rapidly evolved into a
-                dynamic organization dedicated to empowering doctors and nurses
+        <div class="about-us-content">
+          <div class="who-we-are md:grid grid-cols-5 gap-8 mb-[50px] flex flex-col-reverse">
+            <div class="about-para-container col-span-3">
+              <h2 class="about-heading font-semibold xl:text-3xl lg:text-2xl text-xl mb-5">Who We Are</h2>
+              <p class="about-para-content leading-loose">
+                Welcome to Nclex Nepal Pvt Ltd, where your journey to
+                international healthcare excellence begins. As a premier Nclex
+                Review Center, we take pride in not only preparing nurses for
+                success in their Nclex examinations but also in guiding them
+                towards lucrative employment opportunities in the <span class="text-blue-400">USA</span> and
+                <span class="text-blue-400">Australia</span>. Additionally, Nclex Nepal is committed to supporting
+                healthcare professionals in their pursuit of career growth in the
+                <span class="text-blue-400">UK</span>, offering a specialized OET pathway for seamless relocation.
+              </p>
+            </div>
+            <div class="about-img-container col-span-2 md:w-full w-[50%] mx-auto">
+              <img src="about-images/who-we-are.png" alt="about us images" class="w-full">
+            </div>
+          </div>
+          <div class="how-it-started md:grid grid-cols-5 gap-8 mb-[50px] flex flex-col">
+            <div class="about-img-container col-span-2 md:w-full w-[50%] mx-auto">
+              <img src="about-images/how-it-started.png" alt="about us images" class="w-full">
+            </div>
+            <div class="about-para-container col-span-3">
+              <h2 class="about-heading font-semibold xl:text-3xl lg:text-2xl text-xl mb-5">How it all Started</h2>
+              <p class="about-para-content leading-loose">
+                Established in <span class="text-blue-400">2019</span>, Nclex Nepal has rapidly evolved into a
+                dynamic organization dedicated to empowering <span class="text-blue-400">doctors</span> and <span class="text-blue-400">nurses</span>
                 from Nepal to achieve their dreams of becoming international
                 healthcare professionals. With a track record of assisting over
-                3000 individuals, we stand as a testament to the transformative
+                <span class="text-blue-400">3000 individuals</span>, we stand as a testament to the transformative
                 impact we have had on the lives and careers of healthcare
                 aspirants.
               </p>
-              <p class="text-justify mb-4 text-slate-700 lg:hidden block">
+            </div>
+          </div>
+          <!-- <div class="grid grid-cols-5 gap-8 mb-[50px]">
+            <div class="about-para-container col-span-3">
+              <h2 class="about-heading font-semibold text-3xl mb-5">Our Journey</h2>
+              <p class="about-para-content leading-loose">
                 What sets us apart in our 5 years of operation is not just our
                 youthfulness but the distinctive heights we have scaled in the
                 field. At the core of our success lies a set of unwavering work
@@ -474,7 +471,22 @@
                 the quality of education, guidance, and support that every
                 individual receives at Nclex Nepal.
               </p>
-              <p class="text-justify mb-4 text-slate-700">
+            </div>
+            <div class="about-img-container col-span-2 relative self-start">
+              <img src="about-images/journey.png" alt="about us images" class="w-full">
+              <img src="about-images/pink-sphere.png" alt="sphere illustration" class="w-[15%] absolute top-0 right-0 translate-x-[50%] translate-y-[-50%]">
+              <img src="about-images/pink-star.png" alt="star illustration" class="w-[18%] absolute bottom-0 left-0 translate-x-[-40%] translate-y-[40%]">
+            </div>
+          </div>
+          <div class="grid grid-cols-5 gap-8 mb-[50px]">
+            <div class="about-img-container col-span-2 relative self-start">
+              <img src="about-images/journey.png" alt="about us images" class="w-full">
+              <img src="about-images/green-sphere.png" alt="sphere illustration" class="w-[15%] absolute top-0 left-0 translate-x-[-50%] translate-y-[-50%]" >
+              <img src="about-images/green-star.png" alt="star illustration" class="w-[18%] absolute bottom-0 right-0 translate-x-[40%] translate-y-[40%]">
+            </div>
+            <div class="about-para-container col-span-3">
+              <h2 class="about-heading font-semibold text-3xl mb-5">Our Values</h2>
+              <p class="about-para-content leading-loose">
                 Our team is composed of seasoned professionals and educators who
                 are dedicated to providing comprehensive support throughout your
                 journey. We understand that the path to international healthcare
@@ -482,31 +494,20 @@
                 approaches, ensuring our candidates are not just exam-ready but
                 industry-prepared.
               </p>
-              <p class="text-justify mb-4 text-slate-700">
-                Choose Nclex Nepal Pvt Ltd, and embark on a transformative
-                experience that goes beyond preparing you for exams – we prepare
-                you for a rewarding career in international healthcare. Your
-                success story awaits, and we are here to help you script it at
-                Nclex Nepal.
-              </p>
             </div>
-            <p
-              id="about-toggler"
-              class="text-[#7A9E77] cursor-pointer select-none"
-            >
-              Show More >>>
-            </p>
-          </div>
-          <div
-            class="about-us-image-container lg:rounded-xl rounded-md overflow-hidden self-start md:w-full w-[50%] mx-auto"
-          >
-            <img src="nclex/nclex-logo.png" alt="nclex team image" />
-          </div>
+          </div> -->
+        </div>
+      </div>
+      
+      <div class="join-us-container bg-[#F4F8FD] md:py-[40px] py-[20px]">
+        <div class="wrapper text-center">
+          <span class="xl:text-3xl lg:text-2xl text-xl block md:mb-5 mb-3 font-semibold text-[#3B82F6]">Join Us</span>
+          <p class="md:text-lg sm:text-base text-sm lg:w-[70%] mx-auto leading-loose">Choose Nclex Nepal Pvt Ltd, and embark on a transformative experience that goes beyond preparing you for exams – we prepare you for a rewarding career in international healthcare. Your success story awaits, and we are here to help you script it at Nclex Nepal.</p>
         </div>
       </div>
 
       <div
-        class="success-stories-container bg-[#F4F8FD] lg:py-[60px] md:py-[40px] py-[20px]"
+        class="success-stories-container lg:py-[60px] md:py-[40px] py-[20px]"
       >
         <h2
           id="success-stories-header"
@@ -559,7 +560,7 @@
         </div>
       </div>
 
-      <div class="success-heads-container lg:py-[60px] md:py-[40px] py-[20px]">
+      <div class="success-heads-container bg-[#F4F8FD] lg:py-[60px] md:py-[40px] py-[20px]">
         <h2
           id="success-heads"
           class="sub-heading font-medium text-slate-800 xl:text-4xl md:text-3xl sm:text-2xl text-xl md:mb-[80px] sm:mb-[60px] mb-[40px] text-center"
@@ -584,7 +585,7 @@
       </div>
 
       <div
-        class="testimonials-container bg-[#F4F8FD] lg:py-[60px] md:py-[40px] py-[20px]"
+        class="testimonials-container lg:py-[60px] md:py-[40px] py-[20px]"
       >
         <h2
           id="testimonials-header"
@@ -617,7 +618,7 @@
                     class="avatar-container w-[50px] h-[50px] rounded-full overflow-hidden ml-auto mb-1"
                   >
                     <img
-                      src="images/girl-avatar.jpg"
+                      src="testimonials-images/Rojeena.jpg"
                       alt=""
                       class="w-full h-full object-cover"
                     />
@@ -650,7 +651,7 @@
                     class="avatar-container w-[50px] h-[50px] rounded-full overflow-hidden ml-auto mb-1"
                   >
                     <img
-                      src="images/girl-avatar.jpg"
+                      src="testimonials-images/Laxmi.jpg"
                       alt=""
                       class="w-full h-full object-cover"
                     />
@@ -681,7 +682,7 @@
                     class="avatar-container w-[50px] h-[50px] rounded-full overflow-hidden ml-auto mb-1"
                   >
                     <img
-                      src="images/girl-avatar.jpg"
+                      src="testimonials-images/Reshma.jpg"
                       alt=""
                       class="w-full h-full object-cover"
                     />
@@ -733,10 +734,10 @@
           class="grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5"
         >
           <div
-            class="lg:scale-0 lg:opacity-0 reason-1 why-card shadow-[0_0_15px_rgba(0,0,0,0.1)] lg:p-6 p-4 rounded-2xl"
+            class="lg:scale-0 lg:opacity-0 reason-1 why-card border-2 border-[#3b83f67c] lg:p-6 p-4 rounded-2xl"
           >
-            <img src="images/dictionary.svg" alt="" class="sm:mx-0 mx-auto" />
-            <h4 class="text-slate-800 font-bold lg:my-3 sm:my-2 my-1 text-lg">
+            <img src="images/why-us-icon.png" alt="" class="sm:mx-0 mx-auto w-[40px]" />
+            <h4 class="text-slate-800 font-semibold lg:mt-3 sm:mt-2 mt-1 lg:mb-1 mb-0 text-lg">
               Seamless Learning Experience
             </h4>
             <p class="lg:text-[16px] text-[14px]">
@@ -749,10 +750,10 @@
             </p>
           </div>
           <div
-            class="lg:scale-0 lg:opacity-0 reason-2 why-card shadow-[0_0_15px_rgba(0,0,0,0.1)] lg:p-6 p-4 rounded-2xl"
+            class="lg:scale-0 lg:opacity-0 reason-2 why-card border-2 border-[#3b83f67c] lg:p-6 p-4 rounded-2xl"
           >
-            <img src="images/person-board.svg" alt="" class="sm:mx-0 mx-auto" />
-            <h4 class="text-slate-800 font-bold lg:my-3 sm:my-2 my-1 text-lg">
+            <img src="images/why-us-icon.png" alt="" class="sm:mx-0 mx-auto w-[40px]" />
+            <h4 class="text-slate-800 font-semibold lg:mt-3 sm:mt-2 mt-1 lg:mb-1 mb-0 text-lg">
               Efficient Board Processing
             </h4>
             <p class="lg:text-[16px] text-[14px]">
@@ -763,10 +764,10 @@
             </p>
           </div>
           <div
-            class="lg:scale-0 lg:opacity-0 reason-3 why-card shadow-[0_0_15px_rgba(0,0,0,0.1)] lg:p-6 p-4 rounded-2xl"
+            class="lg:scale-0 lg:opacity-0 reason-3 why-card border-2 border-[#3b83f67c] lg:p-6 p-4 rounded-2xl"
           >
-            <img src="images/board.svg" alt="" class="sm:mx-0 mx-auto" />
-            <h4 class="text-slate-800 font-bold lg:my-3 sm:my-2 my-1 text-lg">
+            <img src="images/why-us-icon.png" alt="" class="sm:mx-0 mx-auto w-[40px]" />
+            <h4 class="text-slate-800 font-semibold lg:mt-3 sm:mt-2 mt-1 lg:mb-1 mb-0 text-lg">
               Premium Relocation Services
             </h4>
             <p class="lg:text-[16px] text-[14px]">
@@ -778,10 +779,10 @@
             </p>
           </div>
           <div
-            class="lg:scale-0 lg:opacity-0 reason-4 why-card shadow-[0_0_15px_rgba(0,0,0,0.1)] lg:p-6 p-4 rounded-2xl"
+            class="lg:scale-0 lg:opacity-0 reason-4 why-card border-2 border-[#3b83f67c] lg:p-6 p-4 rounded-2xl"
           >
-            <img src="images/teacher.svg" alt="" class="sm:mx-0 mx-auto" />
-            <h4 class="text-slate-800 font-bold lg:my-3 sm:my-2 my-1 text-lg">
+            <img src="images/why-us-icon.png" alt="" class="sm:mx-0 mx-auto w-[40px]" />
+            <h4 class="text-slate-800 font-semibold lg:mt-3 sm:mt-2 mt-1 lg:mb-1 mb-0 text-lg">
               Community of Like-Minded Professionals
             </h4>
             <p class="lg:text-[16px] text-[14px]">
@@ -793,10 +794,10 @@
             </p>
           </div>
           <div
-            class="lg:scale-0 lg:opacity-0 reason-5 why-card shadow-[0_0_15px_rgba(0,0,0,0.1)] lg:p-6 p-4 rounded-2xl"
+            class="lg:scale-0 lg:opacity-0 reason-5 why-card border-2 border-[#3b83f67c] lg:p-6 p-4 rounded-2xl"
           >
-            <img src="images/shared.svg" alt="" class="sm:mx-0 mx-auto" />
-            <h4 class="text-slate-800 font-bold lg:my-3 sm:my-2 my-1 text-lg">
+            <img src="images/why-us-icon.png" alt="" class="sm:mx-0 mx-auto w-[40px]" />
+            <h4 class="text-slate-800 font-semibold lg:mt-3 sm:mt-2 mt-1 lg:mb-1 mb-0 text-lg">
               Organization Vision
             </h4>
             <p class="lg:text-[16px] text-[14px]">
@@ -808,10 +809,10 @@
             </p>
           </div>
           <div
-            class="lg:scale-0 lg:opacity-0 reason-6 why-card shadow-[0_0_15px_rgba(0,0,0,0.1)] lg:p-6 p-4 rounded-2xl"
+            class="lg:scale-0 lg:opacity-0 reason-6 why-card border-2 border-[#3b83f67c] lg:p-6 p-4 rounded-2xl"
           >
-            <img src="images/community.svg" alt="" class="sm:mx-0 mx-auto" />
-            <h4 class="text-slate-800 font-bold lg:my-3 sm:my-2 my-1 text-lg">
+            <img src="images/why-us-icon.png" alt="" class="sm:mx-0 mx-auto w-[40px]" />
+            <h4 class="text-slate-800 font-semibold lg:mt-3 sm:mt-2 mt-1 lg:mb-1 mb-0 text-lg">
               Success Stories
             </h4>
             <p class="lg:text-[16px] text-[14px]">
@@ -824,27 +825,27 @@
       </div>
 
       <h2
-        id="products"
+        id="recruits"
         class="sub-heading font-medium text-slate-800 xl:text-4xl md:text-3xl sm:text-2xl text-xl lg:mt-[80px] md:mt-[70px] md:mb-[80px] sm:mt-[50px] sm:mb-[60px] mt-[30px] mb-[40px] text-center"
       >
-        Our Product
+        NCLEX Passers Recruitment Event
       </h2>
       <div class="wrapper">
         <div
           class="recruit-img-container rounded-md overflow-hidden shadow-[0_0_10px_rgba(0,0,0,0.18)] relative"
         >
           <div
-            class="try-overlay absolute inset-0 text-2xl grid place-items-center"
+            class="try-overlay absolute inset-0 text-2xl flex items-end justify-center"
           >
             <!-- <span class="click-text translate-y-[200px] opacity-0"
               >Click to try a demo</span
             > -->
             <span
-              class="click-text-recruit flex items-center gap-2 bg-gradient-to-br from-[#6CBF4F] to-[#297bff] translate-y-[200px] opacity-0 px-6 py-4 font-semibol text-white rounded-[30px_5px] shadow-[0_5px_15px_rgba(0,0,0,0.3)]"
-              ><span class="material-symbols-outlined">play_circle</span><span>Register</span></span
+              class="click-text-recruit flex items-center gap-2 bg-gradient-to-br from-[#6CBF4F] to-[#297bff] opacity-0 px-6 py-4 font-semibol text-white rounded-[30px_8px] shadow-[0_5px_15px_rgba(0,0,0,0.3)]"
+              ><span class="material-symbols-outlined">app_registration</span><span>Register Now</span></span
             >
           </div>
-          <a href="https://office.nclexinnepal.com/nclex-passers-recruitment-event" target="_blank" class="block">
+          <a href="https://office.nclexinnepal.com/recruitment-event" target="_blank" class="block">
             <img src="images/nclex-passers.jpg" alt="Passers img" />
           </a>
         </div>
@@ -868,10 +869,10 @@
             class="drop-shadow-xl w-full"
           />
           <div
-            class="try-overlay absolute inset-0 text-2xl grid place-items-center rounded-xl"
+            class="try-overlay absolute inset-0 text-2xl flex items-end justify-center rounded-xl"
           >
             <span
-              class="click-text-event flex items-center gap-2 bg-gradient-to-br from-[#6CBF4F] to-[#297bff] translate-y-[200px] opacity-0 px-6 py-4 font-semibol text-white rounded-[30px_5px] shadow-[0_5px_15px_rgba(0,0,0,0.3)]"
+              class="click-text-event flex items-center gap-2 bg-gradient-to-br from-[#6CBF4F] to-[#297bff] opacity-0 px-6 py-4 font-semibol text-white rounded-[30px_8px] shadow-[0_5px_15px_rgba(0,0,0,0.3)]"
               ><span class="material-symbols-outlined">event_note</span><span>Register Now</span></span
             >
           </div>
@@ -1049,13 +1050,13 @@
           class="our-product-container rounded-md overflow-hidden shadow-[0_0_10px_rgba(0,0,0,0.18)] relative"
         >
           <div
-            class="try-overlay absolute inset-0 text-2xl grid place-items-center"
+            class="try-overlay absolute inset-0 text-2xl flex items-end justify-center"
           >
             <!-- <span class="click-text translate-y-[200px] opacity-0"
               >Click to try a demo</span
             > -->
             <span
-              class="click-text flex items-center gap-2 bg-gradient-to-br from-[#6CBF4F] to-[#297bff] translate-y-[200px] opacity-0 px-6 py-4 font-semibol text-white rounded-[30px_5px] shadow-[0_5px_15px_rgba(0,0,0,0.3)]"
+              class="click-text flex items-center gap-2 bg-gradient-to-br from-[#6CBF4F] to-[#297bff] opacity-0 px-6 py-4 font-semibol text-white rounded-[30px_8px] shadow-[0_5px_15px_rgba(0,0,0,0.3)]"
               ><span class="material-symbols-outlined">play_circle</span><span>Try Demo</span></span
             >
           </div>

@@ -159,13 +159,26 @@ if (isDesktop) {
     duration: headerDuration,
     scrollTrigger: '#about-us',
   });
-
-  gsap.from('.about-us-content-wrapper', {
-    y: 100,
+  gsap.from('.who-we-are', {
+    y: 150,
     opacity: 0,
     duration: 0.8,
-    scrollTrigger: '.about-us-content-wrapper',
+    scrollTrigger: '.who-we-are',
   });
+  gsap.from('.how-it-started', {
+    y: 150,
+    opacity: 0,
+    duration: 0.8,
+    scrollTrigger: '.how-it-started',
+  });
+
+  gsap.from('.join-us-container', {
+    y: 150,
+    opacity: 0,
+    duration: 0.8,
+    scrollTrigger: '.join-us-container',
+  });
+
 
   // CEO Section
 
@@ -444,7 +457,7 @@ if (isDesktop) {
   });
 
   const eventAnimation = gsap.to('.click-text-event', {
-    y: 0,
+    y: -100,
     opacity: 1,
     duration: 0.4,
     ease: 'ease.inOut',
@@ -485,7 +498,7 @@ if (isDesktop) {
   });
 
   const demoAnimation = gsap.to('.click-text', {
-    y: 0,
+    y: -100,
     opacity: 1,
     duration: 0.4,
     ease: 'ease.inOut',
@@ -500,12 +513,34 @@ if (isDesktop) {
     demoAnimation.reverse();
   });
 
-  // const recruitAnimation = gsap.to('.click-text-recruit', {
-  //   y: 0,
-  //   opacity: 1,
-  //   duration: 0.4,
-  //   ease: 'ease.inOut',
-  //   paused: true,
-  // })
+  gsap.from('#recruits', {
+    y: headerTranslate,
+    opacity: 0,
+    duration: headerDuration,
+    scrollTrigger: '#recruits',
+  });
+
+  gsap.from('.recruit-img-container', {
+    y: 100,
+    opacity: 0,
+    duration: 0.6,
+    scrollTrigger: '.recruit-img-container',
+  });
+  
+  const recruitAnimation = gsap.to('.click-text-recruit', {
+    y: -100,
+    opacity: 1,
+    duration: 0.5,
+    ease: 'ease.inOut',
+    paused: true,
+  })
+  
+    const recruitImage = document.querySelector('.recruit-img-container');
+    recruitImage.addEventListener('mouseenter', () => {
+      recruitAnimation.play();
+    });
+    recruitImage.addEventListener('mouseleave', () => {
+      recruitAnimation.reverse();
+    });
 
 }
