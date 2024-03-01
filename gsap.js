@@ -165,19 +165,13 @@ if (isDesktop) {
     duration: 0.8,
     scrollTrigger: '.who-we-are',
   });
-  gsap.from('.how-it-started', {
-    y: 150,
-    opacity: 0,
-    duration: 0.8,
-    scrollTrigger: '.how-it-started',
-  });
 
-  gsap.from('.join-us-container', {
-    y: 150,
-    opacity: 0,
-    duration: 0.8,
-    scrollTrigger: '.join-us-container',
-  });
+  // gsap.from('.join-us-container', {
+  //   y: 150,
+  //   opacity: 0,
+  //   duration: 0.8,
+  //   scrollTrigger: '.join-us-container',
+  // });
 
 
   // CEO Section
@@ -252,24 +246,6 @@ if (isDesktop) {
     opacity: 0,
     duration: headerDuration,
     scrollTrigger: '.why-nclex',
-  });
-  gsap.from('#future-text', {
-    y: 100,
-    opacity: 0,
-    duration: 1,
-    scrollTrigger: '#future-text',
-  });
-  gsap.from('#embark-text', {
-    y: 100,
-    opacity: 0,
-    duration: 1,
-    scrollTrigger: '#embark-text',
-  });
-  gsap.from('#warmth-text', {
-    y: 100,
-    opacity: 0,
-    duration: 1,
-    scrollTrigger: '#warmth-text',
   });
 
   // Animation for success stories
